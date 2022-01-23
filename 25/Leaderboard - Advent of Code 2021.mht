@@ -1,0 +1,559 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://adventofcode.com/2021/leaderboard/self
+Subject: Leaderboard - Advent of Code 2021
+Date: Sat, 25 Dec 2021 07:41:19 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g----"
+
+
+------MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g----
+Content-Type: text/html
+Content-ID: <frame-7BA2AE0755F57493D865DEA2F640E4EC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/2021/leaderboard/self
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8">
+
+<title>Leaderboard - Advent of Code 2021</title>
+<!--[if lt IE 9]><script src=3D"/static/html5.js"></script><![endif]-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DSource+Code+Pro:300=
+&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/css">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://adventofcode.com=
+/static/style.css?26">
+<link rel=3D"stylesheet alternate" type=3D"text/css" href=3D"https://advent=
+ofcode.com/static/highcontrast.css?0" title=3D"High Contrast">
+<link rel=3D"shortcut icon" href=3D"https://adventofcode.com/favicon.png">
+</head><!--
+
+
+
+
+Oh, hello!  Funny seeing you here.
+
+I appreciate your enthusiasm, but you aren't going to find much down here.
+There certainly aren't clues to any of the puzzles.  The best surprises don=
+'t
+even appear in the source until you unlock them for real.
+
+Please be careful with automated requests; I'm not a massive company, and I=
+ can
+only take so much traffic.  Please be considerate so that everyone gets to =
+play.
+
+If you're curious about how Advent of Code works, it's running on some cust=
+om
+Perl code. Other than a few integrations (auth, analytics, social media), I
+built the whole thing myself, including the design, animations, prose, and =
+all
+of the puzzles.
+
+The puzzles are most of the work; preparing a new calendar and a new set of
+puzzles each year takes all of my free time for 4-5 months. A lot of effort
+went into building this thing - I hope you're enjoying playing it as much a=
+s I
+enjoyed making it for you!
+
+If you'd like to hang out, I'm @ericwastl on Twitter.
+
+- Eric Wastl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<body>
+<header><div><h1 class=3D"title-global"><a href=3D"https://adventofcode.com=
+/">Advent of Code</a></h1><nav><ul><li><a href=3D"https://adventofcode.com/=
+2021/about">[About]</a></li><li><a href=3D"https://adventofcode.com/2021/ev=
+ents">[Events]</a></li><li><a href=3D"https://teespring.com/stores/advent-o=
+f-code" target=3D"_blank">[Shop]</a></li><li><a href=3D"https://adventofcod=
+e.com/2021/settings">[Settings]</a></li><li><a href=3D"https://adventofcode=
+.com/2021/auth/logout">[Log Out]</a></li></ul></nav><div class=3D"user">Mik=
+los Sagi <a href=3D"https://adventofcode.com/2021/support" class=3D"support=
+er-badge" title=3D"Advent of Code Supporter">(AoC++)</a> <span class=3D"sta=
+r-count">50*</span></div></div><div><h1 class=3D"title-event">&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;<span class=3D"title-event-wrap">/*</span><a href=3D=
+"https://adventofcode.com/2021">2021</a><span class=3D"title-event-wrap">*/=
+</span></h1><nav><ul><li><a href=3D"https://adventofcode.com/2021">[Calenda=
+r]</a></li><li><a href=3D"https://adventofcode.com/2021/support">[AoC++]</a=
+></li><li><a href=3D"https://adventofcode.com/2021/sponsors">[Sponsors]</a>=
+</li><li><a href=3D"https://adventofcode.com/2021/leaderboard">[Leaderboard=
+]</a></li><li><a href=3D"https://adventofcode.com/2021/stats">[Stats]</a></=
+li></ul></nav></div></header>
+
+<div id=3D"sidebar">
+<div id=3D"sponsor"><div class=3D"quiet">Our <a href=3D"https://adventofcod=
+e.com/2021/sponsors">sponsors</a> help make Advent of Code possible:</div><=
+div class=3D"sponsor"><a href=3D"https://www.capitalone.com/tech/" target=
+=3D"_blank" rel=3D"noopener">Capital One</a> - Leverage technology in new a=
+nd powerful ways to pioneer change, all in the pursuit of changing banking =
+for good. Join us!</div></div>
+</div><!--/sidebar-->
+
+<main>
+<article><p>These are your personal leaderboard statistics.  <em>Rank</em> =
+is your position on that leaderboard: 1 means you were the first person to =
+get that star, 2 means the second, 100 means the 100th, etc.  <em>Score</em=
+> is the number of points you got for that rank: 100 for 1st, 99 for 2nd, .=
+.., 1 for 100th, and 0 otherwise.</p><pre>      <span class=3D"leaderboard-=
+daydesc-first">--------Part 1--------</span>   <span class=3D"leaderboard-d=
+aydesc-both">--------Part 2--------</span>
+Day   <span class=3D"leaderboard-daydesc-first">    Time   Rank  Score</spa=
+n>   <span class=3D"leaderboard-daydesc-both">    Time   Rank  Score</span>
+ 25   00:45:13   2163      0   00:47:03   1630      0
+ 24   07:16:17   2647      0   07:21:48   2542      0
+ 23   00:39:30    568      0   07:21:36   2690      0
+ 22   00:31:50   2587      0   03:09:06   1957      0
+ 21   00:32:53   3372      0   02:28:45   3187      0
+ 20   01:05:47   2345      0   01:26:02   2732      0
+ 19   03:58:11   1780      0   04:39:05   1872      0
+ 18   02:51:47   2317      0   02:59:37   2251      0
+ 17   01:24:25   5011      0   01:34:52   4361      0
+ 16   01:29:38   3028      0   02:44:26   4216      0
+ 15   02:35:26   7430      0   04:23:37   7457      0
+ 14   00:29:06   5080      0   02:18:04   6383      0
+ 13   00:40:16   4557      0   00:43:41   3639      0
+ 12   00:44:25   3986      0   01:28:03   4772      0
+ 11   01:23:30   6851      0   01:28:18   6738      0
+ 10   00:20:27   4569      0   00:33:12   4158      0
+  9   00:54:05   9437      0   01:25:21   6715      0
+  8   00:21:44   6215      0   01:43:55   5041      0
+  7   00:30:15   9832      0   00:37:45   8669      0
+  6   01:18:05  12522      0   02:06:25  11148      0
+  5   01:53:35  10336      0   02:15:44   9381      0
+  4   02:15:24  10562      0   02:38:10   9985      0
+  3   01:24:31  16925      0   02:25:56  13503      0
+  2   01:22:22  17516      0   01:25:28  16445      0
+  1   06:05:52  37590      0   06:33:45  33618      0
+</pre>
+</article>
+</main>
+
+<!-- ga -->
+
+<!-- /ga -->
+
+</body></html>
+------MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro:300&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMRrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE=
+2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtM1rSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMVrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMprSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMZrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1=
+B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMdrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C=
+F, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrSlcZZJmOpw.woff") format("woff"); unic=
+ode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000=
+-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FF=
+FD; }
+------MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/style.css?26
+
+@charset "utf-8";
+
+body { background: rgb(15, 15, 35); color: rgb(204, 204, 204); font-family:=
+ "Source Code Pro", monospace; font-size: 14pt; min-width: 60em; }
+
+img { border: 0px; }
+
+a { outline: 0px; }
+
+main, figure, figcaption { display: block; }
+
+pre, code { font-family: "Source Code Pro", monospace; }
+
+header, main { text-size-adjust: none; }
+
+a { text-decoration: none; color: rgb(0, 153, 0); }
+
+a:hover, a:focus { color: rgb(153, 255, 153); }
+
+h1, h2 { font-size: 1em; font-weight: normal; }
+
+code { position: relative; display: inline-block; margin: 0px; padding: 0px=
+; }
+
+code::before { z-index: -1; content: ""; position: absolute; display: block=
+; inset: 3px -2px 0px; border: 1px solid rgb(51, 51, 64); background: rgb(1=
+6, 16, 26); }
+
+pre.wrap { max-width: 100%; white-space: pre-wrap; }
+
+.quiet { opacity: 0.5; }
+
+p.wrap { width: 45em; }
+
+.hidden-layout { padding: 0px 0.5em; border: 1px solid transparent; }
+
+.hidden { border: 1px dotted gray; overflow: hidden; position: relative; pa=
+dding: 0px 0.5em; }
+
+.hidden::before { content: "(hover to view)"; position: absolute; opacity: =
+0.5; text-align: center; left: 0px; top: 0px; width: 100%; }
+
+.hidden > * { visibility: hidden; }
+
+.hidden:hover { border-color: transparent; }
+
+.hidden:hover::before { display: none; }
+
+.hidden:hover > * { visibility: visible; }
+
+.warning:not(.warning-active) { transition: color 1s ease 0s, opacity 1s ea=
+se 0s; }
+
+.warning-active { color: rgb(255, 0, 0); opacity: 1; }
+
+.star-count { color: rgb(255, 255, 102); }
+
+.supporter-badge { color: rgb(255, 255, 102); }
+
+a.supporter-badge:hover, a.supporter-badge:focus { text-decoration: none; c=
+olor: rgb(255, 255, 204); text-shadow: rgb(255, 255, 102) 0px 0px 5px; }
+
+.sponsor-badge { color: rgb(121, 162, 216); }
+
+a.sponsor-badge:hover, a.sponsor-badge:focus { text-decoration: none; color=
+: rgb(204, 219, 237); text-shadow: rgb(121, 162, 216) 0px 0px 5px; }
+
+#sidebar { width: 200px; float: right; margin: 0px 15px 2em 2em; position: =
+relative; z-index: 10; }
+
+#sponsor { margin-bottom: 2.5em; }
+
+header { white-space: nowrap; cursor: default; z-index: 100; margin-bottom:=
+ 2em; }
+
+header h1 { display: inline-block; margin: 0px; padding-right: 1em; }
+
+header h1 a, header h1 span { display: inline-block; text-decoration: none;=
+ color: rgb(0, 204, 0); text-shadow: rgb(0, 204, 0) 0px 0px 2px, rgb(0, 204=
+, 0) 0px 0px 5px; }
+
+header h1 a:hover, header h1 a:focus { color: rgb(153, 255, 153); text-shad=
+ow: rgb(153, 255, 153) 0px 0px 2px, rgb(153, 255, 153) 0px 0px 5px; }
+
+header h1.title-event .title-event-wrap { opacity: 0.33; white-space: pre; =
+}
+
+header .user { display: inline-block; padding-left: 1em; }
+
+header nav { display: inline-block; }
+
+header nav ul { list-style-type: none; padding: 0px; margin: 0px; display: =
+inline-block; }
+
+header nav li { display: inline-block; padding: 0px 0.6em; }
+
+header nav a { display: inline-block; text-decoration: none; outline: none;=
+ }
+
+input[type=3D"text"], textarea { color: inherit; border: 1px solid rgb(102,=
+ 102, 102); background: rgb(16, 16, 26); padding: 0px 2px; font-family: inh=
+erit; font-size: inherit; margin: 0px; }
+
+textarea { vertical-align: top; }
+
+label img { vertical-align: bottom; position: relative; top: -3px; margin-r=
+ight: 0.3em; }
+
+input[type=3D"radio"] { display: none; }
+
+input[type=3D"radio"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"radio"] ~ span::before { content: "( ) "; }
+
+input[type=3D"radio"] ~ span:hover, input[type=3D"radio"] ~ span:focus { ba=
+ckground-color: rgb(25, 25, 59); }
+
+input[type=3D"radio"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"radio"]:checked ~ span::before { content: "(O) "; }
+
+input[type=3D"checkbox"] { display: none; }
+
+input[type=3D"checkbox"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"checkbox"] ~ span::before { content: "[ ] "; }
+
+input[type=3D"checkbox"] ~ span:hover, input[type=3D"checkbox"] ~ span:focu=
+s { background-color: rgb(25, 25, 59); }
+
+input[type=3D"checkbox"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"checkbox"]:checked ~ span::before { content: "[X] "; }
+
+input[type=3D"checkbox"]:disabled ~ span { opacity: 0.3; cursor: default; }
+
+input[type=3D"checkbox"]:disabled ~ span::before { content: "[-] "; }
+
+input[type=3D"checkbox"]:disabled ~ span:hover { background-color: transpar=
+ent; }
+
+input[type=3D"submit"] { background: transparent; border: 0px; font-family:=
+ inherit; font-size: inherit; margin: 0px; padding: 0px; color: rgb(0, 153,=
+ 0); cursor: pointer; }
+
+input[type=3D"submit"]:hover, input[type=3D"submit"]:focus { color: rgb(153=
+, 255, 153); }
+
+article { width: 45em; margin-bottom: 2em; margin-top: 2em; }
+
+article:first-child { margin-top: 0px; }
+
+article h2 { color: rgb(255, 255, 255); margin-top: 1em; margin-bottom: 1em=
+; white-space: nowrap; }
+
+article h2 + * { margin-top: 0px; }
+
+article em { color: rgb(255, 255, 255); font-style: normal; text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+article em.star { color: rgb(255, 255, 102); font-style: normal; text-shado=
+w: rgb(255, 255, 102) 0px 0px 5px; }
+
+article a { white-space: nowrap; }
+
+article .aside { opacity: 0.6; }
+
+article ul { list-style-type: none; padding: 0px; }
+
+article li { padding-left: 2.5em; position: relative; }
+
+article li::before { content: "=C2=A0=C2=A0-=C2=A0"; position: absolute; le=
+ft: 0px; top: 0px; }
+
+.day-success { color: rgb(255, 255, 102); text-shadow: rgb(255, 255, 102) 0=
+px 0px 5px; }
+
+form#settings input[type=3D"radio"] ~ span { min-width: 30em; }
+
+form#settings input[type=3D"checkbox"] ~ span { min-width: 30em; }
+
+.share { color: rgb(0, 153, 0); cursor: default; transition: color 0.2s eas=
+e 1s; }
+
+.share:hover, .share:focus-within { color: rgb(170, 255, 170); transition: =
+color 0.2s ease 0s; }
+
+.share .share-content { display: inline-block; vertical-align: text-bottom;=
+ white-space: nowrap; overflow: hidden; max-width: 0px; transition: max-wid=
+th 0.2s ease 1s; }
+
+.share .share-content::before { content: "=C2=A0"; }
+
+.share .share-content::after { }
+
+.share:hover .share-content, .share:focus-within .share-content { max-width=
+: 45em; transition: max-width 0.2s ease 0s; }
+
+.puzzle-input { border: 1px solid rgb(153, 153, 153); background: rgb(51, 5=
+1, 51); color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+
+.calendar { cursor: default; user-select: none; }
+
+.calendar > span { color: rgb(51, 51, 51); }
+
+.calendar > a { text-decoration: none; color: rgb(102, 102, 102); outline: =
+none; cursor: default; }
+
+.calendar a:hover, .calendar a:focus { background-color: rgba(119, 119, 165=
+, 0.2); cursor: pointer; }
+
+#calendar-countdown { padding-left: 0.5em; color: rgb(204, 204, 204); }
+
+.calendar .calendar-day { color: rgb(102, 102, 102); }
+
+.calendar a .calendar-day { color: rgb(204, 204, 204); }
+
+.calendar a .calendar-mark-complete, .calendar a .calendar-mark-verycomplet=
+e { visibility: hidden; }
+
+.calendar a.calendar-complete .calendar-mark-complete, .calendar a.calendar=
+-verycomplete .calendar-mark-complete { visibility: visible; color: rgb(255=
+, 255, 102); }
+
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete { visibility:=
+ visible; color: rgb(255, 255, 102); }
+
+.calendar .calendar-day-new { animation: 5s ease 0s 1 normal none running a=
+nim-day-new; }
+
+.calendar .calendar-day-new .calendar-day { animation: 5s ease 0s 1 normal =
+none running anim-day-new-day; }
+
+@keyframes anim-day-new {=20
+  0% { color: rgb(51, 51, 51); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+}
+
+@keyframes anim-day-new-day {=20
+  0% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(204, 204, 204); text-shadow: transparent 0px 0px 5px; }
+}
+
+.eventlist-event { white-space: pre; }
+
+.stats > span, .stats > span .stats-firstonly, .stats > span .stats-both { =
+color: rgb(102, 102, 102); }
+
+.stats > a { color: rgb(204, 204, 204); min-width: 35em; display: inline-bl=
+ock; }
+
+.stats > a:hover, .stats > a:focus { background-color: rgb(30, 30, 70); }
+
+.stats-firstonly { color: rgb(153, 153, 204); }
+
+.stats-both { color: rgb(255, 255, 102); }
+
+.leaderboard-daylinks { cursor: default; }
+
+.leaderboard-daylinks-selected { color: rgb(255, 255, 255); text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+.leaderboard-daydesc-first { color: rgb(153, 153, 204); }
+
+.leaderboard-daydesc-both { color: rgb(255, 255, 102); }
+
+.leaderboard-entry { white-space: pre; }
+
+.leaderboard-entry .leaderboard-totalscore { color: rgb(255, 255, 255); }
+
+.leaderboard-anon { opacity: 0.6; }
+
+.leaderboard-userphoto { display: inline-block; height: 20px; width: 20px; =
+margin: 0px 0.5em; text-align: center; }
+
+.leaderboard-userphoto img { height: 20px; max-width: 20px; vertical-align:=
+ middle; position: relative; top: -2px; }
+
+.leaderboard-time { opacity: 0.5; }
+
+.privboard-row { white-space: pre; }
+
+.privboard-name { vertical-align: text-bottom; }
+
+.privboard-days > span { display: inline-block; color: rgb(51, 51, 51); }
+
+.privboard-days > a { display: inline-block; }
+
+.privboard-star-locked { visibility: hidden; }
+
+.privboard-star-unlocked { color: rgb(51, 51, 51); }
+
+.privboard-star-firstonly { color: rgb(153, 153, 204); }
+
+.privboard-star-both { color: rgb(255, 255, 102); }
+
+.privboard-delbtn { opacity: 0.33; }
+
+.privboard-row:hover .privboard-delbtn { opacity: 1; }
+
+.sponsors { width: 46em; }
+
+.sponsor { margin: 1em 0px; }
+------MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/highcontrast.css?0
+
+@charset "utf-8";
+
+* { background: white !important; color: black !important; text-shadow: non=
+e !important; }
+
+a { color: rgb(0, 0, 255) !important; text-decoration: underline !important=
+; }
+
+em { font-weight: 900 !important; }
+------MultipartBoundary--1tS9dV6TYtojoOYIvB7oU3Ub0N7KbuvUiF35vugG5g------

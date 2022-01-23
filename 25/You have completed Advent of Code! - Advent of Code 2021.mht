@@ -1,0 +1,721 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://adventofcode.com/2021/day/25/answer
+Subject: You have completed Advent of Code! - Advent of Code 2021
+Date: Sat, 25 Dec 2021 07:40:23 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----"
+
+
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----
+Content-Type: text/html
+Content-ID: <frame-7BA2AE0755F57493D865DEA2F640E4EC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/2021/day/25/answer
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
+xt/css" href=3D"cid:css-31cb4558-8a75-49a9-aa1d-95a665396ddd@mhtml.blink" /=
+>
+
+<title>You have completed Advent of Code! - Advent of Code 2021</title>
+<!--[if lt IE 9]><script src=3D"/static/html5.js"></script><![endif]-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DSource+Code+Pro:300=
+&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/css">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://adventofcode.com=
+/static/style.css?26">
+<link rel=3D"stylesheet alternate" type=3D"text/css" href=3D"https://advent=
+ofcode.com/static/highcontrast.css?0" title=3D"High Contrast">
+<link rel=3D"shortcut icon" href=3D"https://adventofcode.com/favicon.png">
+</head><!--
+
+
+
+
+Oh, hello!  Funny seeing you here.
+
+I appreciate your enthusiasm, but you aren't going to find much down here.
+There certainly aren't clues to any of the puzzles.  The best surprises don=
+'t
+even appear in the source until you unlock them for real.
+
+Please be careful with automated requests; I'm not a massive company, and I=
+ can
+only take so much traffic.  Please be considerate so that everyone gets to =
+play.
+
+If you're curious about how Advent of Code works, it's running on some cust=
+om
+Perl code. Other than a few integrations (auth, analytics, social media), I
+built the whole thing myself, including the design, animations, prose, and =
+all
+of the puzzles.
+
+The puzzles are most of the work; preparing a new calendar and a new set of
+puzzles each year takes all of my free time for 4-5 months. A lot of effort
+went into building this thing - I hope you're enjoying playing it as much a=
+s I
+enjoyed making it for you!
+
+If you'd like to hang out, I'm @ericwastl on Twitter.
+
+- Eric Wastl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<body>
+<header><div><h1 class=3D"title-global"><a href=3D"https://adventofcode.com=
+/">Advent of Code</a></h1><nav><ul><li><a href=3D"https://adventofcode.com/=
+2021/about">[About]</a></li><li><a href=3D"https://adventofcode.com/2021/ev=
+ents">[Events]</a></li><li><a href=3D"https://teespring.com/stores/advent-o=
+f-code" target=3D"_blank">[Shop]</a></li><li><a href=3D"https://adventofcod=
+e.com/2021/settings">[Settings]</a></li><li><a href=3D"https://adventofcode=
+.com/2021/auth/logout">[Log Out]</a></li></ul></nav><div class=3D"user">Mik=
+los Sagi <a href=3D"https://adventofcode.com/2021/support" class=3D"support=
+er-badge" title=3D"Advent of Code Supporter">(AoC++)</a> <span class=3D"sta=
+r-count">50*</span></div></div><div><h1 class=3D"title-event">&nbsp;&nbsp;<=
+span class=3D"title-event-wrap">{:year </span><a href=3D"https://adventofco=
+de.com/2021">2021</a><span class=3D"title-event-wrap">}</span></h1><nav><ul=
+><li><a href=3D"https://adventofcode.com/2021">[Calendar]</a></li><li><a hr=
+ef=3D"https://adventofcode.com/2021/support">[AoC++]</a></li><li><a href=3D=
+"https://adventofcode.com/2021/sponsors">[Sponsors]</a></li><li><a href=3D"=
+https://adventofcode.com/2021/leaderboard">[Leaderboard]</a></li><li><a hre=
+f=3D"https://adventofcode.com/2021/stats">[Stats]</a></li></ul></nav></div>=
+</header>
+
+<div id=3D"sidebar">
+<div id=3D"sponsor"><div class=3D"quiet">Our <a href=3D"https://adventofcod=
+e.com/2021/sponsors">sponsors</a> help make Advent of Code possible:</div><=
+div class=3D"sponsor"><a href=3D"https://www.careers.philips.com/global/en"=
+ target=3D"_blank" rel=3D"noopener">Philips NV =E2=80=93 DMIS</a> - Don't j=
+ust challenge yourself, challenge the status quo</div></div>
+</div><!--/sidebar-->
+
+<main>
+<article>
+<p>You use all <span class=3D"day-success">fifty stars</span> to boost the =
+signal and remotely start the sleigh! Now, you just have to find your way b=
+ack to the surface...</p><p>...did you know crab submarines come with color=
+ed lights?</p>
+<p class=3D"aside">Congratulations!  You've finished every puzzle in Advent=
+ of Code 2021!  I hope you had as much fun solving them as I had making the=
+m for you.  I'd love to hear about your adventure; you can get in touch wit=
+h me via contact info on <a href=3D"http://was.tl/" target=3D"_blank">my we=
+bsite</a> or through <a href=3D"https://twitter.com/ericwastl" target=3D"_b=
+lank">Twitter</a>.</p>
+<p class=3D"aside">If you'd like to see more things like this in the future=
+, please consider <a href=3D"https://adventofcode.com/2021/support" target=
+=3D"_blank">supporting</a> Advent of Code and sharing it with others.</p>
+<p class=3D"aside">To hear about future projects, you can follow me on <a h=
+ref=3D"https://twitter.com/ericwastl" target=3D"_blank">Twitter</a>.</p>
+<p class=3D"aside">I've <span style=3D"border-bottom:1px dotted #ffff66;" t=
+itle=3D"Yep, just like that.  There's at least one in the description for e=
+ach day.">highlighted</span> the easter eggs in each puzzle, just in case y=
+ou missed any.  Hover your mouse over them, and the easter egg will appear.=
+</p>
+<p>You can <span class=3D"share">[Share<span class=3D"share-content">on
+  <a href=3D"https://twitter.com/intent/tweet?text=3DI+just+completed+all+2=
+5+days+of+Advent+of+Code+2021%21&amp;url=3Dhttps%3A%2F%2Fadventofcode%2Ecom=
+%2F&amp;related=3Dericwastl&amp;hashtags=3DAdventOfCode" target=3D"_blank">=
+Twitter</a>
+  <a target=3D"_blank">Mastodon</a></span>]</span> this moment with your fr=
+iends, or <a href=3D"https://adventofcode.com/2021">[Go Check on Your Calen=
+dar]</a>.
+</p></article>
+
+<div class=3D"sf sf3" style=3D"top:-4.21em; left:66.14vw; animation-delay:-=
+9.34s;"></div><div class=3D"sf sf1" style=3D"top:-2.59em; left:65.46vw; ani=
+mation-delay:-4.31s;"></div><div class=3D"sf sf0" style=3D"top:-1.36em; lef=
+t:28.52vw; animation-delay:-9.34s;"></div><div class=3D"sf sf2" style=3D"to=
+p:-3.13em; left:3.53vw; animation-delay:-9.14s;"></div><div class=3D"sf sf0=
+" style=3D"top:-1.90em; left:22.81vw; animation-delay:-11.67s;"></div><div =
+class=3D"sf sf0" style=3D"top:-1.85em; left:13.65vw; animation-delay:-7.49s=
+;"></div><div class=3D"sf sf0" style=3D"top:-1.63em; left:86.99vw; animatio=
+n-delay:-11.98s;"></div><div class=3D"sf sf2" style=3D"top:-3.00em; left:78=
+.02vw; animation-delay:-11.28s;"></div><div class=3D"sf sf0" style=3D"top:-=
+1.14em; left:15.67vw; animation-delay:-15.62s;"></div><div class=3D"sf sf3"=
+ style=3D"top:-4.61em; left:31.52vw; animation-delay:-4.43s;"></div><div cl=
+ass=3D"sf sf2" style=3D"top:-3.70em; left:24.81vw; animation-delay:-13.65s;=
+"></div><div class=3D"sf sf1" style=3D"top:-2.26em; left:68.68vw; animation=
+-delay:-17.40s;"></div><div class=3D"sf sf1" style=3D"top:-2.41em; left:28.=
+01vw; animation-delay:-13.80s;"></div><div class=3D"sf sf0" style=3D"top:-1=
+.66em; left:39.10vw; animation-delay:-12.23s;"></div><div class=3D"sf sf2" =
+style=3D"top:-3.34em; left:2.25vw; animation-delay:-9.31s;"></div><div clas=
+s=3D"sf sf1" style=3D"top:-2.84em; left:48.42vw; animation-delay:-11.77s;">=
+</div><div class=3D"sf sf0" style=3D"top:-1.23em; left:51.61vw; animation-d=
+elay:-0.24s;"></div><div class=3D"sf sf2" style=3D"top:-3.67em; left:63.58v=
+w; animation-delay:-11.59s;"></div><div class=3D"sf sf2" style=3D"top:-3.15=
+em; left:64.25vw; animation-delay:-5.80s;"></div><div class=3D"sf sf2" styl=
+e=3D"top:-3.81em; left:27.34vw; animation-delay:-1.53s;"></div><div class=
+=3D"sf sf2" style=3D"top:-3.18em; left:76.97vw; animation-delay:-3.90s;"></=
+div><div class=3D"sf sf2" style=3D"top:-3.24em; left:72.26vw; animation-del=
+ay:-15.69s;"></div><div class=3D"sf sf3" style=3D"top:-4.10em; left:1.95vw;=
+ animation-delay:-4.62s;"></div><div class=3D"sf sf3" style=3D"top:-4.31em;=
+ left:8.69vw; animation-delay:-3.64s;"></div><div class=3D"sf sf0" style=3D=
+"top:-1.20em; left:67.55vw; animation-delay:-7.99s;"></div><div class=3D"sf=
+ sf3" style=3D"top:-4.51em; left:55.12vw; animation-delay:-14.13s;"></div><=
+div class=3D"sf sf0" style=3D"top:-1.17em; left:63.94vw; animation-delay:-1=
+3.26s;"></div><div class=3D"sf sf0" style=3D"top:-1.34em; left:47.07vw; ani=
+mation-delay:-2.83s;"></div><div class=3D"sf sf1" style=3D"top:-2.16em; lef=
+t:40.14vw; animation-delay:-16.84s;"></div><div class=3D"sf sf1" style=3D"t=
+op:-2.16em; left:57.89vw; animation-delay:-19.99s;"></div><div class=3D"sf =
+sf3" style=3D"top:-4.46em; left:86.00vw; animation-delay:-19.17s;"></div><d=
+iv class=3D"sf sf0" style=3D"top:-1.59em; left:21.16vw; animation-delay:-0.=
+99s;"></div><div class=3D"sf sf2" style=3D"top:-3.47em; left:17.26vw; anima=
+tion-delay:-16.81s;"></div><div class=3D"sf sf2" style=3D"top:-3.46em; left=
+:79.79vw; animation-delay:-12.81s;"></div><div class=3D"sf sf0" style=3D"to=
+p:-1.51em; left:47.20vw; animation-delay:-5.60s;"></div><div class=3D"sf sf=
+1" style=3D"top:-2.83em; left:92.13vw; animation-delay:-3.19s;"></div><div =
+class=3D"sf sf2" style=3D"top:-3.32em; left:21.07vw; animation-delay:-2.98s=
+;"></div><div class=3D"sf sf2" style=3D"top:-3.67em; left:58.80vw; animatio=
+n-delay:-15.32s;"></div><div class=3D"sf sf1" style=3D"top:-2.72em; left:48=
+.80vw; animation-delay:-13.27s;"></div><div class=3D"sf sf1" style=3D"top:-=
+2.56em; left:87.66vw; animation-delay:-10.93s;"></div><div class=3D"sf sf2"=
+ style=3D"top:-3.85em; left:17.22vw; animation-delay:-8.25s;"></div><div cl=
+ass=3D"sf sf2" style=3D"top:-4.00em; left:1.56vw; animation-delay:-7.03s;">=
+</div><div class=3D"sf sf0" style=3D"top:-1.08em; left:16.04vw; animation-d=
+elay:-17.33s;"></div><div class=3D"sf sf3" style=3D"top:-4.02em; left:65.17=
+vw; animation-delay:-17.89s;"></div><div class=3D"sf sf0" style=3D"top:-1.2=
+4em; left:25.70vw; animation-delay:-16.50s;"></div><div class=3D"sf sf0" st=
+yle=3D"top:-1.82em; left:53.14vw; animation-delay:-2.27s;"></div><div class=
+=3D"sf sf3" style=3D"top:-4.55em; left:16.98vw; animation-delay:-13.34s;"><=
+/div><div class=3D"sf sf2" style=3D"top:-3.57em; left:56.78vw; animation-de=
+lay:-8.64s;"></div><div class=3D"sf sf2" style=3D"top:-3.63em; left:69.47vw=
+; animation-delay:-6.38s;"></div><div class=3D"sf sf0" style=3D"top:-1.00em=
+; left:41.09vw; animation-delay:-5.85s;"></div><div class=3D"sf sf2" style=
+=3D"top:-3.91em; left:25.94vw; animation-delay:-11.79s;"></div><div class=
+=3D"sf sf3" style=3D"top:-4.21em; left:61.97vw; animation-delay:-5.60s;"></=
+div><div class=3D"sf sf2" style=3D"top:-3.30em; left:35.66vw; animation-del=
+ay:-17.43s;"></div><div class=3D"sf sf0" style=3D"top:-1.46em; left:46.81vw=
+; animation-delay:-4.02s;"></div><div class=3D"sf sf2" style=3D"top:-3.85em=
+; left:73.07vw; animation-delay:-5.06s;"></div><div class=3D"sf sf1" style=
+=3D"top:-2.73em; left:48.05vw; animation-delay:-14.81s;"></div><div class=
+=3D"sf sf0" style=3D"top:-1.52em; left:22.35vw; animation-delay:-15.22s;"><=
+/div><div class=3D"sf sf3" style=3D"top:-4.24em; left:65.95vw; animation-de=
+lay:-13.76s;"></div><div class=3D"sf sf2" style=3D"top:-3.60em; left:35.34v=
+w; animation-delay:-16.02s;"></div><div class=3D"sf sf2" style=3D"top:-3.69=
+em; left:26.90vw; animation-delay:-5.66s;"></div><div class=3D"sf sf3" styl=
+e=3D"top:-4.02em; left:58.33vw; animation-delay:-17.02s;"></div><div class=
+=3D"sf sf2" style=3D"top:-3.83em; left:73.39vw; animation-delay:-18.22s;"><=
+/div><div class=3D"sf sf2" style=3D"top:-3.45em; left:57.71vw; animation-de=
+lay:-2.52s;"></div><div class=3D"sf sf2" style=3D"top:-3.29em; left:15.54vw=
+; animation-delay:-5.27s;"></div><div class=3D"sf sf3" style=3D"top:-4.01em=
+; left:6.58vw; animation-delay:-4.74s;"></div><div class=3D"sf sf3" style=
+=3D"top:-4.54em; left:27.16vw; animation-delay:-1.22s;"></div><div class=3D=
+"sf sf1" style=3D"top:-2.83em; left:52.42vw; animation-delay:-16.67s;"></di=
+v><div class=3D"sf sf2" style=3D"top:-3.71em; left:91.58vw; animation-delay=
+:-12.61s;"></div><div class=3D"sf sf3" style=3D"top:-4.10em; left:10.89vw; =
+animation-delay:-16.76s;"></div><div class=3D"sf sf1" style=3D"top:-2.98em;=
+ left:34.12vw; animation-delay:-18.69s;"></div><div class=3D"sf sf3" style=
+=3D"top:-4.99em; left:72.76vw; animation-delay:-3.36s;"></div><div class=3D=
+"sf sf3" style=3D"top:-4.67em; left:18.46vw; animation-delay:-2.95s;"></div=
+><div class=3D"sf sf0" style=3D"top:-1.67em; left:64.29vw; animation-delay:=
+-15.28s;"></div><div class=3D"sf sf3" style=3D"top:-4.18em; left:69.50vw; a=
+nimation-delay:-9.96s;"></div><div class=3D"sf sf2" style=3D"top:-3.29em; l=
+eft:56.52vw; animation-delay:-6.89s;"></div><div class=3D"sf sf0" style=3D"=
+top:-1.13em; left:29.22vw; animation-delay:-18.00s;"></div><div class=3D"sf=
+ sf1" style=3D"top:-2.51em; left:56.05vw; animation-delay:-10.84s;"></div><=
+div class=3D"sf sf2" style=3D"top:-3.72em; left:90.44vw; animation-delay:-1=
+6.81s;"></div><div class=3D"sf sf2" style=3D"top:-3.64em; left:23.09vw; ani=
+mation-delay:-19.97s;"></div><div class=3D"sf sf3" style=3D"top:-4.46em; le=
+ft:11.09vw; animation-delay:-2.03s;"></div><div class=3D"sf sf2" style=3D"t=
+op:-3.75em; left:63.33vw; animation-delay:-10.61s;"></div><div class=3D"sf =
+sf1" style=3D"top:-2.98em; left:78.18vw; animation-delay:-3.06s;"></div><di=
+v class=3D"sf sf1" style=3D"top:-2.75em; left:26.97vw; animation-delay:-14.=
+30s;"></div><div class=3D"sf sf0" style=3D"top:-1.46em; left:57.12vw; anima=
+tion-delay:-9.49s;"></div><div class=3D"sf sf1" style=3D"top:-2.34em; left:=
+11.93vw; animation-delay:-2.17s;"></div><div class=3D"sf sf2" style=3D"top:=
+-3.48em; left:41.63vw; animation-delay:-12.78s;"></div><div class=3D"sf sf2=
+" style=3D"top:-3.06em; left:49.15vw; animation-delay:-16.68s;"></div><div =
+class=3D"sf sf0" style=3D"top:-1.09em; left:54.74vw; animation-delay:-14.44=
+s;"></div><div class=3D"sf sf0" style=3D"top:-1.76em; left:39.53vw; animati=
+on-delay:-9.37s;"></div><div class=3D"sf sf0" style=3D"top:-1.63em; left:39=
+.29vw; animation-delay:-9.80s;"></div><div class=3D"sf sf0" style=3D"top:-1=
+.59em; left:31.50vw; animation-delay:-19.95s;"></div><div class=3D"sf sf2" =
+style=3D"top:-3.76em; left:89.88vw; animation-delay:-17.19s;"></div><div cl=
+ass=3D"sf sf0" style=3D"top:-1.64em; left:68.51vw; animation-delay:-1.87s;"=
+></div><div class=3D"sf sf2" style=3D"top:-3.70em; left:14.95vw; animation-=
+delay:-6.57s;"></div><div class=3D"sf sf0" style=3D"top:-1.11em; left:93.21=
+vw; animation-delay:-2.91s;"></div><div class=3D"sf sf3" style=3D"top:-4.55=
+em; left:49.10vw; animation-delay:-8.56s;"></div><div class=3D"sf sf1" styl=
+e=3D"top:-2.39em; left:64.22vw; animation-delay:-5.13s;"></div><div class=
+=3D"sf sf1" style=3D"top:-2.66em; left:26.51vw; animation-delay:-15.22s;"><=
+/div><div class=3D"sf sf1" style=3D"top:-2.32em; left:42.01vw; animation-de=
+lay:-18.20s;"></div><div class=3D"sf sf1" style=3D"top:-2.80em; left:55.80v=
+w; animation-delay:-17.20s;"></div>
+</main>
+
+<!-- ga -->
+
+<!-- /ga -->
+
+</body></html>
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-31cb4558-8a75-49a9-aa1d-95a665396ddd@mhtml.blink
+
+@charset "utf-8";
+
+.calendar-bkg { background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba=
+(255, 255, 255, 0.3) 100%); }
+
+.sf { position: fixed; animation: 20s linear 0s infinite normal none runnin=
+g anim-sf0; z-index: -1; }
+
+.sf::before { content: "*"; }
+
+.sf.sf0 { color: rgb(255, 255, 255); }
+
+.sf.sf1 { color: rgb(204, 204, 204); animation-name: anim-sf1; }
+
+.sf.sf2 { color: rgb(153, 153, 153); animation-name: anim-sf2; }
+
+.sf.sf3 { color: rgb(102, 102, 102); animation-name: anim-sf3; }
+
+@keyframes anim-sf0 {=20
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1, 1); }
+  95% { transform: translate(8em, 100vh) rotate(1turn) scale(1, 1); }
+  100% { transform: translate(8em, 100vh) rotate(1turn) scale(0, 0); }
+}
+
+@keyframes anim-sf1 {=20
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1, 1); }
+  95% { transform: translate(6em, 100vh) rotate(1turn) scale(1, 1); }
+  100% { transform: translate(6em, 100vh) rotate(1turn) scale(0, 0); }
+}
+
+@keyframes anim-sf2 {=20
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1, 1); }
+  95% { transform: translate(4em, 100vh) rotate(1turn) scale(1, 1); }
+  100% { transform: translate(4em, 100vh) rotate(1turn) scale(0, 0); }
+}
+
+@keyframes anim-sf3 {=20
+  0% { transform: translate(0px, 0px) rotate(0deg) scale(1, 1); }
+  95% { transform: translate(2em, 100vh) rotate(1turn) scale(1, 1); }
+  100% { transform: translate(2em, 100vh) rotate(1turn) scale(0, 0); }
+}
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro:300&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMRrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE=
+2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtM1rSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMVrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMprSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMZrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1=
+B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMdrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C=
+F, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrSlcZZJmOpw.woff") format("woff"); unic=
+ode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000=
+-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FF=
+FD; }
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/style.css?26
+
+@charset "utf-8";
+
+body { background: rgb(15, 15, 35); color: rgb(204, 204, 204); font-family:=
+ "Source Code Pro", monospace; font-size: 14pt; min-width: 60em; }
+
+img { border: 0px; }
+
+a { outline: 0px; }
+
+main, figure, figcaption { display: block; }
+
+pre, code { font-family: "Source Code Pro", monospace; }
+
+header, main { text-size-adjust: none; }
+
+a { text-decoration: none; color: rgb(0, 153, 0); }
+
+a:hover, a:focus { color: rgb(153, 255, 153); }
+
+h1, h2 { font-size: 1em; font-weight: normal; }
+
+code { position: relative; display: inline-block; margin: 0px; padding: 0px=
+; }
+
+code::before { z-index: -1; content: ""; position: absolute; display: block=
+; inset: 3px -2px 0px; border: 1px solid rgb(51, 51, 64); background: rgb(1=
+6, 16, 26); }
+
+pre.wrap { max-width: 100%; white-space: pre-wrap; }
+
+.quiet { opacity: 0.5; }
+
+p.wrap { width: 45em; }
+
+.hidden-layout { padding: 0px 0.5em; border: 1px solid transparent; }
+
+.hidden { border: 1px dotted gray; overflow: hidden; position: relative; pa=
+dding: 0px 0.5em; }
+
+.hidden::before { content: "(hover to view)"; position: absolute; opacity: =
+0.5; text-align: center; left: 0px; top: 0px; width: 100%; }
+
+.hidden > * { visibility: hidden; }
+
+.hidden:hover { border-color: transparent; }
+
+.hidden:hover::before { display: none; }
+
+.hidden:hover > * { visibility: visible; }
+
+.warning:not(.warning-active) { transition: color 1s ease 0s, opacity 1s ea=
+se 0s; }
+
+.warning-active { color: rgb(255, 0, 0); opacity: 1; }
+
+.star-count { color: rgb(255, 255, 102); }
+
+.supporter-badge { color: rgb(255, 255, 102); }
+
+a.supporter-badge:hover, a.supporter-badge:focus { text-decoration: none; c=
+olor: rgb(255, 255, 204); text-shadow: rgb(255, 255, 102) 0px 0px 5px; }
+
+.sponsor-badge { color: rgb(121, 162, 216); }
+
+a.sponsor-badge:hover, a.sponsor-badge:focus { text-decoration: none; color=
+: rgb(204, 219, 237); text-shadow: rgb(121, 162, 216) 0px 0px 5px; }
+
+#sidebar { width: 200px; float: right; margin: 0px 15px 2em 2em; position: =
+relative; z-index: 10; }
+
+#sponsor { margin-bottom: 2.5em; }
+
+header { white-space: nowrap; cursor: default; z-index: 100; margin-bottom:=
+ 2em; }
+
+header h1 { display: inline-block; margin: 0px; padding-right: 1em; }
+
+header h1 a, header h1 span { display: inline-block; text-decoration: none;=
+ color: rgb(0, 204, 0); text-shadow: rgb(0, 204, 0) 0px 0px 2px, rgb(0, 204=
+, 0) 0px 0px 5px; }
+
+header h1 a:hover, header h1 a:focus { color: rgb(153, 255, 153); text-shad=
+ow: rgb(153, 255, 153) 0px 0px 2px, rgb(153, 255, 153) 0px 0px 5px; }
+
+header h1.title-event .title-event-wrap { opacity: 0.33; white-space: pre; =
+}
+
+header .user { display: inline-block; padding-left: 1em; }
+
+header nav { display: inline-block; }
+
+header nav ul { list-style-type: none; padding: 0px; margin: 0px; display: =
+inline-block; }
+
+header nav li { display: inline-block; padding: 0px 0.6em; }
+
+header nav a { display: inline-block; text-decoration: none; outline: none;=
+ }
+
+input[type=3D"text"], textarea { color: inherit; border: 1px solid rgb(102,=
+ 102, 102); background: rgb(16, 16, 26); padding: 0px 2px; font-family: inh=
+erit; font-size: inherit; margin: 0px; }
+
+textarea { vertical-align: top; }
+
+label img { vertical-align: bottom; position: relative; top: -3px; margin-r=
+ight: 0.3em; }
+
+input[type=3D"radio"] { display: none; }
+
+input[type=3D"radio"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"radio"] ~ span::before { content: "( ) "; }
+
+input[type=3D"radio"] ~ span:hover, input[type=3D"radio"] ~ span:focus { ba=
+ckground-color: rgb(25, 25, 59); }
+
+input[type=3D"radio"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"radio"]:checked ~ span::before { content: "(O) "; }
+
+input[type=3D"checkbox"] { display: none; }
+
+input[type=3D"checkbox"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"checkbox"] ~ span::before { content: "[ ] "; }
+
+input[type=3D"checkbox"] ~ span:hover, input[type=3D"checkbox"] ~ span:focu=
+s { background-color: rgb(25, 25, 59); }
+
+input[type=3D"checkbox"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"checkbox"]:checked ~ span::before { content: "[X] "; }
+
+input[type=3D"checkbox"]:disabled ~ span { opacity: 0.3; cursor: default; }
+
+input[type=3D"checkbox"]:disabled ~ span::before { content: "[-] "; }
+
+input[type=3D"checkbox"]:disabled ~ span:hover { background-color: transpar=
+ent; }
+
+input[type=3D"submit"] { background: transparent; border: 0px; font-family:=
+ inherit; font-size: inherit; margin: 0px; padding: 0px; color: rgb(0, 153,=
+ 0); cursor: pointer; }
+
+input[type=3D"submit"]:hover, input[type=3D"submit"]:focus { color: rgb(153=
+, 255, 153); }
+
+article { width: 45em; margin-bottom: 2em; margin-top: 2em; }
+
+article:first-child { margin-top: 0px; }
+
+article h2 { color: rgb(255, 255, 255); margin-top: 1em; margin-bottom: 1em=
+; white-space: nowrap; }
+
+article h2 + * { margin-top: 0px; }
+
+article em { color: rgb(255, 255, 255); font-style: normal; text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+article em.star { color: rgb(255, 255, 102); font-style: normal; text-shado=
+w: rgb(255, 255, 102) 0px 0px 5px; }
+
+article a { white-space: nowrap; }
+
+article .aside { opacity: 0.6; }
+
+article ul { list-style-type: none; padding: 0px; }
+
+article li { padding-left: 2.5em; position: relative; }
+
+article li::before { content: "=C2=A0=C2=A0-=C2=A0"; position: absolute; le=
+ft: 0px; top: 0px; }
+
+.day-success { color: rgb(255, 255, 102); text-shadow: rgb(255, 255, 102) 0=
+px 0px 5px; }
+
+form#settings input[type=3D"radio"] ~ span { min-width: 30em; }
+
+form#settings input[type=3D"checkbox"] ~ span { min-width: 30em; }
+
+.share { color: rgb(0, 153, 0); cursor: default; transition: color 0.2s eas=
+e 1s; }
+
+.share:hover, .share:focus-within { color: rgb(170, 255, 170); transition: =
+color 0.2s ease 0s; }
+
+.share .share-content { display: inline-block; vertical-align: text-bottom;=
+ white-space: nowrap; overflow: hidden; max-width: 0px; transition: max-wid=
+th 0.2s ease 1s; }
+
+.share .share-content::before { content: "=C2=A0"; }
+
+.share .share-content::after { }
+
+.share:hover .share-content, .share:focus-within .share-content { max-width=
+: 45em; transition: max-width 0.2s ease 0s; }
+
+.puzzle-input { border: 1px solid rgb(153, 153, 153); background: rgb(51, 5=
+1, 51); color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+
+.calendar { cursor: default; user-select: none; }
+
+.calendar > span { color: rgb(51, 51, 51); }
+
+.calendar > a { text-decoration: none; color: rgb(102, 102, 102); outline: =
+none; cursor: default; }
+
+.calendar a:hover, .calendar a:focus { background-color: rgba(119, 119, 165=
+, 0.2); cursor: pointer; }
+
+#calendar-countdown { padding-left: 0.5em; color: rgb(204, 204, 204); }
+
+.calendar .calendar-day { color: rgb(102, 102, 102); }
+
+.calendar a .calendar-day { color: rgb(204, 204, 204); }
+
+.calendar a .calendar-mark-complete, .calendar a .calendar-mark-verycomplet=
+e { visibility: hidden; }
+
+.calendar a.calendar-complete .calendar-mark-complete, .calendar a.calendar=
+-verycomplete .calendar-mark-complete { visibility: visible; color: rgb(255=
+, 255, 102); }
+
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete { visibility:=
+ visible; color: rgb(255, 255, 102); }
+
+.calendar .calendar-day-new { animation: 5s ease 0s 1 normal none running a=
+nim-day-new; }
+
+.calendar .calendar-day-new .calendar-day { animation: 5s ease 0s 1 normal =
+none running anim-day-new-day; }
+
+@keyframes anim-day-new {=20
+  0% { color: rgb(51, 51, 51); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+}
+
+@keyframes anim-day-new-day {=20
+  0% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(204, 204, 204); text-shadow: transparent 0px 0px 5px; }
+}
+
+.eventlist-event { white-space: pre; }
+
+.stats > span, .stats > span .stats-firstonly, .stats > span .stats-both { =
+color: rgb(102, 102, 102); }
+
+.stats > a { color: rgb(204, 204, 204); min-width: 35em; display: inline-bl=
+ock; }
+
+.stats > a:hover, .stats > a:focus { background-color: rgb(30, 30, 70); }
+
+.stats-firstonly { color: rgb(153, 153, 204); }
+
+.stats-both { color: rgb(255, 255, 102); }
+
+.leaderboard-daylinks { cursor: default; }
+
+.leaderboard-daylinks-selected { color: rgb(255, 255, 255); text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+.leaderboard-daydesc-first { color: rgb(153, 153, 204); }
+
+.leaderboard-daydesc-both { color: rgb(255, 255, 102); }
+
+.leaderboard-entry { white-space: pre; }
+
+.leaderboard-entry .leaderboard-totalscore { color: rgb(255, 255, 255); }
+
+.leaderboard-anon { opacity: 0.6; }
+
+.leaderboard-userphoto { display: inline-block; height: 20px; width: 20px; =
+margin: 0px 0.5em; text-align: center; }
+
+.leaderboard-userphoto img { height: 20px; max-width: 20px; vertical-align:=
+ middle; position: relative; top: -2px; }
+
+.leaderboard-time { opacity: 0.5; }
+
+.privboard-row { white-space: pre; }
+
+.privboard-name { vertical-align: text-bottom; }
+
+.privboard-days > span { display: inline-block; color: rgb(51, 51, 51); }
+
+.privboard-days > a { display: inline-block; }
+
+.privboard-star-locked { visibility: hidden; }
+
+.privboard-star-unlocked { color: rgb(51, 51, 51); }
+
+.privboard-star-firstonly { color: rgb(153, 153, 204); }
+
+.privboard-star-both { color: rgb(255, 255, 102); }
+
+.privboard-delbtn { opacity: 0.33; }
+
+.privboard-row:hover .privboard-delbtn { opacity: 1; }
+
+.sponsors { width: 46em; }
+
+.sponsor { margin: 1em 0px; }
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/highcontrast.css?0
+
+@charset "utf-8";
+
+* { background: white !important; color: black !important; text-shadow: non=
+e !important; }
+
+a { color: rgb(0, 0, 255) !important; text-decoration: underline !important=
+; }
+
+em { font-weight: 900 !important; }
+------MultipartBoundary--5U3lJMKlSLfa4LrmnaFvkxQTEQjQCHjT7MOYlJW85B------

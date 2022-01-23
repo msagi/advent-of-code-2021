@@ -1,0 +1,960 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://adventofcode.com/2021/day/19
+Subject: Day 19 - Advent of Code 2021
+Date: Sat, 25 Dec 2021 07:38:52 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----"
+
+
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----
+Content-Type: text/html
+Content-ID: <frame-7BA2AE0755F57493D865DEA2F640E4EC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/2021/day/19
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
+xt/css" href=3D"cid:css-db50bfbc-bcf5-4869-8354-b2fe1285c4f9@mhtml.blink" /=
+>
+
+<title>Day 19 - Advent of Code 2021</title>
+<!--[if lt IE 9]><script src=3D"/static/html5.js"></script><![endif]-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DSource+Code+Pro:300=
+&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/css">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://adventofcode.com=
+/static/style.css?26">
+<link rel=3D"stylesheet alternate" type=3D"text/css" href=3D"https://advent=
+ofcode.com/static/highcontrast.css?0" title=3D"High Contrast">
+<link rel=3D"shortcut icon" href=3D"https://adventofcode.com/favicon.png">
+</head><!--
+
+
+
+
+Oh, hello!  Funny seeing you here.
+
+I appreciate your enthusiasm, but you aren't going to find much down here.
+There certainly aren't clues to any of the puzzles.  The best surprises don=
+'t
+even appear in the source until you unlock them for real.
+
+Please be careful with automated requests; I'm not a massive company, and I=
+ can
+only take so much traffic.  Please be considerate so that everyone gets to =
+play.
+
+If you're curious about how Advent of Code works, it's running on some cust=
+om
+Perl code. Other than a few integrations (auth, analytics, social media), I
+built the whole thing myself, including the design, animations, prose, and =
+all
+of the puzzles.
+
+The puzzles are most of the work; preparing a new calendar and a new set of
+puzzles each year takes all of my free time for 4-5 months. A lot of effort
+went into building this thing - I hope you're enjoying playing it as much a=
+s I
+enjoyed making it for you!
+
+If you'd like to hang out, I'm @ericwastl on Twitter.
+
+- Eric Wastl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<body>
+<header><div><h1 class=3D"title-global"><a href=3D"https://adventofcode.com=
+/">Advent of Code</a></h1><nav><ul><li><a href=3D"https://adventofcode.com/=
+2021/about">[About]</a></li><li><a href=3D"https://adventofcode.com/2021/ev=
+ents">[Events]</a></li><li><a href=3D"https://teespring.com/stores/advent-o=
+f-code" target=3D"_blank">[Shop]</a></li><li><a href=3D"https://adventofcod=
+e.com/2021/settings">[Settings]</a></li><li><a href=3D"https://adventofcode=
+.com/2021/auth/logout">[Log Out]</a></li></ul></nav><div class=3D"user">Mik=
+los Sagi <a href=3D"https://adventofcode.com/2021/support" class=3D"support=
+er-badge" title=3D"Advent of Code Supporter">(AoC++)</a> <span class=3D"sta=
+r-count">50*</span></div></div><div><h1 class=3D"title-event">&nbsp;&nbsp;&=
+nbsp;<span class=3D"title-event-wrap">&lt;y&gt;</span><a href=3D"https://ad=
+ventofcode.com/2021">2021</a><span class=3D"title-event-wrap">&lt;/y&gt;</s=
+pan></h1><nav><ul><li><a href=3D"https://adventofcode.com/2021">[Calendar]<=
+/a></li><li><a href=3D"https://adventofcode.com/2021/support">[AoC++]</a></=
+li><li><a href=3D"https://adventofcode.com/2021/sponsors">[Sponsors]</a></l=
+i><li><a href=3D"https://adventofcode.com/2021/leaderboard">[Leaderboard]</=
+a></li><li><a href=3D"https://adventofcode.com/2021/stats">[Stats]</a></li>=
+</ul></nav></div></header>
+
+<div id=3D"sidebar">
+<div id=3D"sponsor"><div class=3D"quiet">Our <a href=3D"https://adventofcod=
+e.com/2021/sponsors">sponsors</a> help make Advent of Code possible:</div><=
+div class=3D"sponsor"><a href=3D"https://www.rewe-digital.com/" target=3D"_=
+blank" rel=3D"noopener">REWE digital</a> - Java, Kotlin or Scala, we don't =
+like Coding Drama. From Germany to Bulgaria, we're some kind of retail Sant=
+a. Give yourself a gift: put us on your list!</div></div>
+</div><!--/sidebar-->
+
+<main>
+
+<article class=3D"day-desc"><h2>--- Day 19: Beacon Scanner ---</h2><p>As yo=
+ur <a href=3D"https://adventofcode.com/2021/day/17">probe</a> drifted down =
+through this area, it released an assortment of <em>beacons</em> and <em>sc=
+anners</em> into the water. It's difficult to navigate in the pitch black o=
+pen waters of the ocean trench, but if you can build a map of the trench us=
+ing data from the scanners, you should be able to safely reach the bottom.<=
+/p>
+<p>The beacons and scanners float motionless in the water; they're designed=
+ to maintain the same position for long periods of time. Each scanner is ca=
+pable of detecting all beacons in a large cube centered on the scanner; bea=
+cons that are at most 1000 units away from the scanner in each of the three=
+ axes (<code>x</code>, <code>y</code>, and <code>z</code>) have their preci=
+se position determined relative to the scanner. However, scanners cannot de=
+tect other scanners. The submarine has automatically summarized the relativ=
+e positions of beacons detected by each scanner (your puzzle input).</p>
+<p>For example, if a scanner is at <code>x,y,z</code> coordinates <code>500=
+,0,-500</code> and there are beacons at <code>-500,1000,-1500</code> and <c=
+ode>1501,0,-500</code>, the scanner could report that the first beacon is a=
+t <code>-1000,1000,-1000</code> (relative to the scanner) but would not det=
+ect the second beacon at all.</p>
+<p>Unfortunately, while each scanner can report the positions of all detect=
+ed beacons relative to itself, <em>the scanners do not know their own posit=
+ion</em>. You'll need to determine the positions of the beacons and scanner=
+s yourself.</p>
+<p>The scanners and beacons map a single contiguous 3d region. This region =
+can be reconstructed by finding pairs of scanners that have overlapping det=
+ection regions such that there are <em>at least 12 beacons</em> that both s=
+canners detect within the overlap. By establishing 12 common beacons, you c=
+an precisely determine where the scanners are relative to each other, allow=
+ing you to reconstruct the beacon map one scanner at a time.</p>
+<p>For a moment, consider only two dimensions. Suppose you have the followi=
+ng scanner reports:</p>
+<pre><code>--- scanner 0 ---
+0,2
+4,1
+3,3
+
+--- scanner 1 ---
+-1,-1
+-5,0
+-2,1
+</code></pre>
+<p>Drawing <code>x</code> increasing rightward, <code>y</code> increasing u=
+pward, scanners as <code>S</code>, and beacons as <code>B</code>, scanner <=
+code>0</code> detects this:</p>
+<pre><code>...B.
+B....
+....B
+S....
+</code></pre>
+<p>Scanner <code>1</code> detects this:</p>
+<pre><code>...B..
+B....S
+....B.
+</code></pre>
+<p>For this example, assume scanners only need 3 overlapping beacons. Then,=
+ the beacons visible to both scanners overlap to produce the following comp=
+lete map:</p>
+<pre><code>...B..
+B....S
+....B.
+S.....
+</code></pre>
+<p>Unfortunately, there's a second problem: the scanners also don't know th=
+eir <em>rotation or facing direction</em>. Due to magnetic alignment, each =
+scanner is rotated some integer number of 90-degree turns around all of the=
+ <code>x</code>, <code>y</code>, and <code>z</code> axes. That is, one scan=
+ner might call a direction positive <code>x</code>, while another scanner m=
+ight call that direction negative <code>y</code>. Or, two scanners might ag=
+ree on which direction is positive <code>x</code>, but one scanner might be=
+ upside-down from the perspective of the other scanner. In total, each scan=
+ner could be in any of 24 different orientations: facing positive or negati=
+ve <code>x</code>, <code>y</code>, or <code>z</code>, and considering any o=
+f four directions "up" from that facing.</p>
+<p>For example, here is an arrangement of beacons as seen from a scanner in=
+ the same position but in different orientations:</p>
+<pre><code>--- scanner 0 ---
+-1,-1,1
+-2,-2,2
+-3,-3,3
+-2,-3,1
+5,6,-4
+8,0,7
+
+--- scanner 0 ---
+1,-1,1
+2,-2,2
+3,-3,3
+2,-1,3
+-5,4,-6
+-8,-7,0
+
+--- scanner 0 ---
+-1,-1,-1
+-2,-2,-2
+-3,-3,-3
+-1,-3,-2
+4,6,5
+-7,0,8
+
+--- scanner 0 ---
+1,1,-1
+2,2,-2
+3,3,-3
+1,3,-2
+-4,-6,5
+7,0,8
+
+--- scanner 0 ---
+1,1,1
+2,2,2
+3,3,3
+3,1,2
+-6,-4,-5
+0,7,-8
+</code></pre>
+<p>By finding pairs of scanners that both see at least 12 of the same beaco=
+ns, you can assemble the entire map. For example, consider the following re=
+port:</p>
+<pre><code>--- scanner 0 ---
+404,-588,-901
+528,-643,409
+-838,591,734
+390,-675,-793
+-537,-823,-458
+-485,-357,347
+-345,-311,381
+-661,-816,-575
+-876,649,763
+-618,-824,-621
+553,345,-567
+474,580,667
+-447,-329,318
+-584,868,-557
+544,-627,-890
+564,392,-477
+455,729,728
+-892,524,684
+-689,845,-530
+423,-701,434
+7,-33,-71
+630,319,-379
+443,580,662
+-789,900,-551
+459,-707,401
+
+--- scanner 1 ---
+686,422,578
+605,423,415
+515,917,-361
+-336,658,858
+95,138,22
+-476,619,847
+-340,-569,-846
+567,-361,727
+-460,603,-452
+669,-402,600
+729,430,532
+-500,-761,534
+-322,571,750
+-466,-666,-811
+-429,-592,574
+-355,545,-477
+703,-491,-529
+-328,-685,520
+413,935,-424
+-391,539,-444
+586,-435,557
+-364,-763,-893
+807,-499,-711
+755,-354,-619
+553,889,-390
+
+--- scanner 2 ---
+649,640,665
+682,-795,504
+-784,533,-524
+-644,584,-595
+-588,-843,648
+-30,6,44
+-674,560,763
+500,723,-460
+609,671,-379
+-555,-800,653
+-675,-892,-343
+697,-426,-610
+578,704,681
+493,664,-388
+-671,-858,530
+-667,343,800
+571,-461,-707
+-138,-166,112
+-889,563,-600
+646,-828,498
+640,759,510
+-630,509,768
+-681,-892,-333
+673,-379,-804
+-742,-814,-386
+577,-820,562
+
+--- scanner 3 ---
+-589,542,597
+605,-692,669
+-500,565,-823
+-660,373,557
+-458,-679,-417
+-488,449,543
+-626,468,-788
+338,-750,-386
+528,-832,-391
+562,-778,733
+-938,-730,414
+543,643,-506
+-524,371,-870
+407,773,750
+-104,29,83
+378,-903,-323
+-778,-728,485
+426,699,580
+-438,-605,-362
+-469,-447,-387
+509,732,623
+647,635,-688
+-868,-804,481
+614,-800,639
+595,780,-596
+
+--- scanner 4 ---
+727,592,562
+-293,-554,779
+441,611,-461
+-714,465,-776
+-743,427,-804
+-660,-479,-426
+832,-632,460
+927,-485,-438
+408,393,-506
+466,436,-512
+110,16,151
+-258,-428,682
+-393,719,612
+-211,-452,876
+808,-476,-593
+-575,615,604
+-485,667,467
+-680,325,-822
+-627,-443,-432
+872,-547,-609
+833,512,582
+807,604,487
+839,-516,451
+891,-625,532
+-652,-548,-490
+30,-46,-14
+</code></pre>
+<p>Because all coordinates are relative, in this example, all "absolute" po=
+sitions will be expressed relative to scanner <code>0</code> (using the ori=
+entation of scanner <code>0</code> and as if scanner <code>0</code> is at c=
+oordinates <code>0,0,0</code>).</p>
+<p>Scanners <code>0</code> and <code>1</code> have overlapping detection cu=
+bes; the 12 beacons they both detect (relative to scanner <code>0</code>) a=
+re at the following coordinates:</p>
+<pre><code>-618,-824,-621
+-537,-823,-458
+-447,-329,318
+404,-588,-901
+544,-627,-890
+528,-643,409
+-661,-816,-575
+390,-675,-793
+423,-701,434
+-345,-311,381
+459,-707,401
+-485,-357,347
+</code></pre>
+<p>These same 12 beacons (in the same order) but from the perspective of sc=
+anner <code>1</code> are:</p>
+<pre><code>686,422,578
+605,423,415
+515,917,-361
+-336,658,858
+-476,619,847
+-460,603,-452
+729,430,532
+-322,571,750
+-355,545,-477
+413,935,-424
+-391,539,-444
+553,889,-390
+</code></pre>
+<p>Because of this, scanner <code>1</code> must be at <code>68,-1246,-43</c=
+ode> (relative to scanner <code>0</code>).</p>
+<p>Scanner <code>4</code> overlaps with scanner <code>1</code>; the 12 beac=
+ons they both detect (relative to scanner <code>0</code>) are:</p>
+<pre><code>459,-707,401
+-739,-1745,668
+-485,-357,347
+432,-2009,850
+528,-643,409
+423,-701,434
+-345,-311,381
+408,-1815,803
+534,-1912,768
+-687,-1600,576
+-447,-329,318
+-635,-1737,486
+</code></pre>
+<p>So, scanner <code>4</code> is at <code>-20,-1133,1061</code> (relative t=
+o scanner <code>0</code>).</p>
+<p>Following this process, scanner <code>2</code> must be at <code>1105,-12=
+05,1229</code> (relative to scanner <code>0</code>) and scanner <code>3</co=
+de> must be at <code>-92,-2380,-20</code> (relative to scanner <code>0</cod=
+e>).</p>
+<p>The full list of beacons (relative to scanner <code>0</code>) is:</p>
+<pre><code>-892,524,684
+-876,649,763
+-838,591,734
+-789,900,-551
+-739,-1745,668
+-706,-3180,-659
+-697,-3072,-689
+-689,845,-530
+-687,-1600,576
+-661,-816,-575
+-654,-3158,-753
+-635,-1737,486
+-631,-672,1502
+-624,-1620,1868
+-620,-3212,371
+-618,-824,-621
+-612,-1695,1788
+-601,-1648,-643
+-584,868,-557
+-537,-823,-458
+-532,-1715,1894
+-518,-1681,-600
+-499,-1607,-770
+-485,-357,347
+-470,-3283,303
+-456,-621,1527
+-447,-329,318
+-430,-3130,366
+-413,-627,1469
+-345,-311,381
+-36,-1284,1171
+-27,-1108,-65
+7,-33,-71
+12,-2351,-103
+26,-1119,1091
+346,-2985,342
+366,-3059,397
+377,-2827,367
+390,-675,-793
+396,-1931,-563
+404,-588,-901
+408,-1815,803
+423,-701,434
+432,-2009,850
+443,580,662
+455,729,728
+456,-540,1869
+459,-707,401
+465,-695,1988
+474,580,667
+496,-1584,1900
+497,-1838,-617
+527,-524,1933
+528,-643,409
+534,-1912,768
+544,-627,-890
+553,345,-567
+564,392,-477
+568,-2007,-577
+605,-1665,1952
+612,-1593,1893
+630,319,-379
+686,-3108,-505
+776,-3184,-501
+846,-3110,-434
+1135,-1161,1235
+1243,-1093,1063
+1660,-552,429
+1693,-557,386
+1735,-437,1738
+1749,-1800,1813
+1772,-405,1572
+1776,-675,371
+1779,-442,1789
+1780,-1548,337
+1786,-1538,337
+1847,-1591,415
+1889,-1729,1762
+1994,-1805,1792
+</code></pre>
+<p>In total, there are <code><em>79</em></code> beacons.</p>
+<p>Assemble the full map of beacons. <em>How many beacons are there?</em></=
+p>
+</article>
+<p>Your puzzle answer was <code>430</code>.</p><article class=3D"day-desc">=
+<h2 id=3D"part2">--- Part Two ---</h2><p>Sometimes, it's a good idea to app=
+reciate just how <span title=3D"The deepest parts of the ocean are about as=
+ deep as the altitude of a normal commercial aircraft, roughly 11 kilometer=
+s or 36000 feet.">big</span> the ocean is. Using the <a href=3D"https://en.=
+wikipedia.org/wiki/Taxicab_geometry" target=3D"_blank">Manhattan distance</=
+a>, how far apart do the scanners get?</p>
+<p>In the above example, scanners <code>2</code> (<code>1105,-1205,1229</co=
+de>) and <code>3</code> (<code>-92,-2380,-20</code>) are the largest Manhat=
+tan distance apart. In total, they are <code>1197 + 1175 + 1249 =3D <em>362=
+1</em></code> units apart.</p>
+<p><em>What is the largest Manhattan distance between any two scanners?</em=
+></p>
+</article>
+<p>Your puzzle answer was <code>11860</code>.</p><p class=3D"day-success">B=
+oth parts of this puzzle are complete! They provide two gold stars: **</p>
+<p>At this point, all that is left is for you to <a href=3D"https://advento=
+fcode.com/2021">admire your Advent calendar</a>.</p>
+<p>If you still want to see it, you can <a href=3D"https://adventofcode.com=
+/2021/day/19/input" target=3D"_blank">get your puzzle input</a>.</p>
+<p>You can also <span class=3D"share">[Share<span class=3D"share-content">o=
+n
+  <a href=3D"https://twitter.com/intent/tweet?text=3DI%27ve+completed+%22Be=
+acon+Scanner%22+%2D+Day+19+%2D+Advent+of+Code+2021&amp;url=3Dhttps%3A%2F%2F=
+adventofcode%2Ecom%2F2021%2Fday%2F19&amp;related=3Dericwastl&amp;hashtags=
+=3DAdventOfCode" target=3D"_blank">Twitter</a>
+  <a target=3D"_blank">Mastodon</a></span>]</span> this puzzle.</p>
+</main>
+
+<!-- ga -->
+
+<!-- /ga -->
+
+</body></html>
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-db50bfbc-bcf5-4869-8354-b2fe1285c4f9@mhtml.blink
+
+@charset "utf-8";
+
+article [title] { border-bottom: 1px dotted rgb(255, 255, 102); }
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro:300&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMRrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE=
+2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtM1rSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMVrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMprSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMZrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1=
+B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMdrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C=
+F, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrSlcZZJmOpw.woff") format("woff"); unic=
+ode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000=
+-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FF=
+FD; }
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/style.css?26
+
+@charset "utf-8";
+
+body { background: rgb(15, 15, 35); color: rgb(204, 204, 204); font-family:=
+ "Source Code Pro", monospace; font-size: 14pt; min-width: 60em; }
+
+img { border: 0px; }
+
+a { outline: 0px; }
+
+main, figure, figcaption { display: block; }
+
+pre, code { font-family: "Source Code Pro", monospace; }
+
+header, main { text-size-adjust: none; }
+
+a { text-decoration: none; color: rgb(0, 153, 0); }
+
+a:hover, a:focus { color: rgb(153, 255, 153); }
+
+h1, h2 { font-size: 1em; font-weight: normal; }
+
+code { position: relative; display: inline-block; margin: 0px; padding: 0px=
+; }
+
+code::before { z-index: -1; content: ""; position: absolute; display: block=
+; inset: 3px -2px 0px; border: 1px solid rgb(51, 51, 64); background: rgb(1=
+6, 16, 26); }
+
+pre.wrap { max-width: 100%; white-space: pre-wrap; }
+
+.quiet { opacity: 0.5; }
+
+p.wrap { width: 45em; }
+
+.hidden-layout { padding: 0px 0.5em; border: 1px solid transparent; }
+
+.hidden { border: 1px dotted gray; overflow: hidden; position: relative; pa=
+dding: 0px 0.5em; }
+
+.hidden::before { content: "(hover to view)"; position: absolute; opacity: =
+0.5; text-align: center; left: 0px; top: 0px; width: 100%; }
+
+.hidden > * { visibility: hidden; }
+
+.hidden:hover { border-color: transparent; }
+
+.hidden:hover::before { display: none; }
+
+.hidden:hover > * { visibility: visible; }
+
+.warning:not(.warning-active) { transition: color 1s ease 0s, opacity 1s ea=
+se 0s; }
+
+.warning-active { color: rgb(255, 0, 0); opacity: 1; }
+
+.star-count { color: rgb(255, 255, 102); }
+
+.supporter-badge { color: rgb(255, 255, 102); }
+
+a.supporter-badge:hover, a.supporter-badge:focus { text-decoration: none; c=
+olor: rgb(255, 255, 204); text-shadow: rgb(255, 255, 102) 0px 0px 5px; }
+
+.sponsor-badge { color: rgb(121, 162, 216); }
+
+a.sponsor-badge:hover, a.sponsor-badge:focus { text-decoration: none; color=
+: rgb(204, 219, 237); text-shadow: rgb(121, 162, 216) 0px 0px 5px; }
+
+#sidebar { width: 200px; float: right; margin: 0px 15px 2em 2em; position: =
+relative; z-index: 10; }
+
+#sponsor { margin-bottom: 2.5em; }
+
+header { white-space: nowrap; cursor: default; z-index: 100; margin-bottom:=
+ 2em; }
+
+header h1 { display: inline-block; margin: 0px; padding-right: 1em; }
+
+header h1 a, header h1 span { display: inline-block; text-decoration: none;=
+ color: rgb(0, 204, 0); text-shadow: rgb(0, 204, 0) 0px 0px 2px, rgb(0, 204=
+, 0) 0px 0px 5px; }
+
+header h1 a:hover, header h1 a:focus { color: rgb(153, 255, 153); text-shad=
+ow: rgb(153, 255, 153) 0px 0px 2px, rgb(153, 255, 153) 0px 0px 5px; }
+
+header h1.title-event .title-event-wrap { opacity: 0.33; white-space: pre; =
+}
+
+header .user { display: inline-block; padding-left: 1em; }
+
+header nav { display: inline-block; }
+
+header nav ul { list-style-type: none; padding: 0px; margin: 0px; display: =
+inline-block; }
+
+header nav li { display: inline-block; padding: 0px 0.6em; }
+
+header nav a { display: inline-block; text-decoration: none; outline: none;=
+ }
+
+input[type=3D"text"], textarea { color: inherit; border: 1px solid rgb(102,=
+ 102, 102); background: rgb(16, 16, 26); padding: 0px 2px; font-family: inh=
+erit; font-size: inherit; margin: 0px; }
+
+textarea { vertical-align: top; }
+
+label img { vertical-align: bottom; position: relative; top: -3px; margin-r=
+ight: 0.3em; }
+
+input[type=3D"radio"] { display: none; }
+
+input[type=3D"radio"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"radio"] ~ span::before { content: "( ) "; }
+
+input[type=3D"radio"] ~ span:hover, input[type=3D"radio"] ~ span:focus { ba=
+ckground-color: rgb(25, 25, 59); }
+
+input[type=3D"radio"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"radio"]:checked ~ span::before { content: "(O) "; }
+
+input[type=3D"checkbox"] { display: none; }
+
+input[type=3D"checkbox"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"checkbox"] ~ span::before { content: "[ ] "; }
+
+input[type=3D"checkbox"] ~ span:hover, input[type=3D"checkbox"] ~ span:focu=
+s { background-color: rgb(25, 25, 59); }
+
+input[type=3D"checkbox"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"checkbox"]:checked ~ span::before { content: "[X] "; }
+
+input[type=3D"checkbox"]:disabled ~ span { opacity: 0.3; cursor: default; }
+
+input[type=3D"checkbox"]:disabled ~ span::before { content: "[-] "; }
+
+input[type=3D"checkbox"]:disabled ~ span:hover { background-color: transpar=
+ent; }
+
+input[type=3D"submit"] { background: transparent; border: 0px; font-family:=
+ inherit; font-size: inherit; margin: 0px; padding: 0px; color: rgb(0, 153,=
+ 0); cursor: pointer; }
+
+input[type=3D"submit"]:hover, input[type=3D"submit"]:focus { color: rgb(153=
+, 255, 153); }
+
+article { width: 45em; margin-bottom: 2em; margin-top: 2em; }
+
+article:first-child { margin-top: 0px; }
+
+article h2 { color: rgb(255, 255, 255); margin-top: 1em; margin-bottom: 1em=
+; white-space: nowrap; }
+
+article h2 + * { margin-top: 0px; }
+
+article em { color: rgb(255, 255, 255); font-style: normal; text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+article em.star { color: rgb(255, 255, 102); font-style: normal; text-shado=
+w: rgb(255, 255, 102) 0px 0px 5px; }
+
+article a { white-space: nowrap; }
+
+article .aside { opacity: 0.6; }
+
+article ul { list-style-type: none; padding: 0px; }
+
+article li { padding-left: 2.5em; position: relative; }
+
+article li::before { content: "=C2=A0=C2=A0-=C2=A0"; position: absolute; le=
+ft: 0px; top: 0px; }
+
+.day-success { color: rgb(255, 255, 102); text-shadow: rgb(255, 255, 102) 0=
+px 0px 5px; }
+
+form#settings input[type=3D"radio"] ~ span { min-width: 30em; }
+
+form#settings input[type=3D"checkbox"] ~ span { min-width: 30em; }
+
+.share { color: rgb(0, 153, 0); cursor: default; transition: color 0.2s eas=
+e 1s; }
+
+.share:hover, .share:focus-within { color: rgb(170, 255, 170); transition: =
+color 0.2s ease 0s; }
+
+.share .share-content { display: inline-block; vertical-align: text-bottom;=
+ white-space: nowrap; overflow: hidden; max-width: 0px; transition: max-wid=
+th 0.2s ease 1s; }
+
+.share .share-content::before { content: "=C2=A0"; }
+
+.share .share-content::after { }
+
+.share:hover .share-content, .share:focus-within .share-content { max-width=
+: 45em; transition: max-width 0.2s ease 0s; }
+
+.puzzle-input { border: 1px solid rgb(153, 153, 153); background: rgb(51, 5=
+1, 51); color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+
+.calendar { cursor: default; user-select: none; }
+
+.calendar > span { color: rgb(51, 51, 51); }
+
+.calendar > a { text-decoration: none; color: rgb(102, 102, 102); outline: =
+none; cursor: default; }
+
+.calendar a:hover, .calendar a:focus { background-color: rgba(119, 119, 165=
+, 0.2); cursor: pointer; }
+
+#calendar-countdown { padding-left: 0.5em; color: rgb(204, 204, 204); }
+
+.calendar .calendar-day { color: rgb(102, 102, 102); }
+
+.calendar a .calendar-day { color: rgb(204, 204, 204); }
+
+.calendar a .calendar-mark-complete, .calendar a .calendar-mark-verycomplet=
+e { visibility: hidden; }
+
+.calendar a.calendar-complete .calendar-mark-complete, .calendar a.calendar=
+-verycomplete .calendar-mark-complete { visibility: visible; color: rgb(255=
+, 255, 102); }
+
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete { visibility:=
+ visible; color: rgb(255, 255, 102); }
+
+.calendar .calendar-day-new { animation: 5s ease 0s 1 normal none running a=
+nim-day-new; }
+
+.calendar .calendar-day-new .calendar-day { animation: 5s ease 0s 1 normal =
+none running anim-day-new-day; }
+
+@keyframes anim-day-new {=20
+  0% { color: rgb(51, 51, 51); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+}
+
+@keyframes anim-day-new-day {=20
+  0% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(204, 204, 204); text-shadow: transparent 0px 0px 5px; }
+}
+
+.eventlist-event { white-space: pre; }
+
+.stats > span, .stats > span .stats-firstonly, .stats > span .stats-both { =
+color: rgb(102, 102, 102); }
+
+.stats > a { color: rgb(204, 204, 204); min-width: 35em; display: inline-bl=
+ock; }
+
+.stats > a:hover, .stats > a:focus { background-color: rgb(30, 30, 70); }
+
+.stats-firstonly { color: rgb(153, 153, 204); }
+
+.stats-both { color: rgb(255, 255, 102); }
+
+.leaderboard-daylinks { cursor: default; }
+
+.leaderboard-daylinks-selected { color: rgb(255, 255, 255); text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+.leaderboard-daydesc-first { color: rgb(153, 153, 204); }
+
+.leaderboard-daydesc-both { color: rgb(255, 255, 102); }
+
+.leaderboard-entry { white-space: pre; }
+
+.leaderboard-entry .leaderboard-totalscore { color: rgb(255, 255, 255); }
+
+.leaderboard-anon { opacity: 0.6; }
+
+.leaderboard-userphoto { display: inline-block; height: 20px; width: 20px; =
+margin: 0px 0.5em; text-align: center; }
+
+.leaderboard-userphoto img { height: 20px; max-width: 20px; vertical-align:=
+ middle; position: relative; top: -2px; }
+
+.leaderboard-time { opacity: 0.5; }
+
+.privboard-row { white-space: pre; }
+
+.privboard-name { vertical-align: text-bottom; }
+
+.privboard-days > span { display: inline-block; color: rgb(51, 51, 51); }
+
+.privboard-days > a { display: inline-block; }
+
+.privboard-star-locked { visibility: hidden; }
+
+.privboard-star-unlocked { color: rgb(51, 51, 51); }
+
+.privboard-star-firstonly { color: rgb(153, 153, 204); }
+
+.privboard-star-both { color: rgb(255, 255, 102); }
+
+.privboard-delbtn { opacity: 0.33; }
+
+.privboard-row:hover .privboard-delbtn { opacity: 1; }
+
+.sponsors { width: 46em; }
+
+.sponsor { margin: 1em 0px; }
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/highcontrast.css?0
+
+@charset "utf-8";
+
+* { background: white !important; color: black !important; text-shadow: non=
+e !important; }
+
+a { color: rgb(0, 0, 255) !important; text-decoration: underline !important=
+; }
+
+em { font-weight: 900 !important; }
+------MultipartBoundary--9dUKa1lQFj64JDCkqZ6zd6bBFArhmpq4kXEhvcYXWT------

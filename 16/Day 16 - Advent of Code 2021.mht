@@ -1,0 +1,765 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://adventofcode.com/2021/day/16
+Subject: Day 16 - Advent of Code 2021
+Date: Sat, 25 Dec 2021 07:38:17 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----"
+
+
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----
+Content-Type: text/html
+Content-ID: <frame-7BA2AE0755F57493D865DEA2F640E4EC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/2021/day/16
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
+xt/css" href=3D"cid:css-664aeb9e-000a-40c4-9f16-b971fb6c4882@mhtml.blink" /=
+>
+
+<title>Day 16 - Advent of Code 2021</title>
+<!--[if lt IE 9]><script src=3D"/static/html5.js"></script><![endif]-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DSource+Code+Pro:300=
+&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/css">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://adventofcode.com=
+/static/style.css?26">
+<link rel=3D"stylesheet alternate" type=3D"text/css" href=3D"https://advent=
+ofcode.com/static/highcontrast.css?0" title=3D"High Contrast">
+<link rel=3D"shortcut icon" href=3D"https://adventofcode.com/favicon.png">
+</head><!--
+
+
+
+
+Oh, hello!  Funny seeing you here.
+
+I appreciate your enthusiasm, but you aren't going to find much down here.
+There certainly aren't clues to any of the puzzles.  The best surprises don=
+'t
+even appear in the source until you unlock them for real.
+
+Please be careful with automated requests; I'm not a massive company, and I=
+ can
+only take so much traffic.  Please be considerate so that everyone gets to =
+play.
+
+If you're curious about how Advent of Code works, it's running on some cust=
+om
+Perl code. Other than a few integrations (auth, analytics, social media), I
+built the whole thing myself, including the design, animations, prose, and =
+all
+of the puzzles.
+
+The puzzles are most of the work; preparing a new calendar and a new set of
+puzzles each year takes all of my free time for 4-5 months. A lot of effort
+went into building this thing - I hope you're enjoying playing it as much a=
+s I
+enjoyed making it for you!
+
+If you'd like to hang out, I'm @ericwastl on Twitter.
+
+- Eric Wastl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<body>
+<header><div><h1 class=3D"title-global"><a href=3D"https://adventofcode.com=
+/">Advent of Code</a></h1><nav><ul><li><a href=3D"https://adventofcode.com/=
+2021/about">[About]</a></li><li><a href=3D"https://adventofcode.com/2021/ev=
+ents">[Events]</a></li><li><a href=3D"https://teespring.com/stores/advent-o=
+f-code" target=3D"_blank">[Shop]</a></li><li><a href=3D"https://adventofcod=
+e.com/2021/settings">[Settings]</a></li><li><a href=3D"https://adventofcode=
+.com/2021/auth/logout">[Log Out]</a></li></ul></nav><div class=3D"user">Mik=
+los Sagi <a href=3D"https://adventofcode.com/2021/support" class=3D"support=
+er-badge" title=3D"Advent of Code Supporter">(AoC++)</a> <span class=3D"sta=
+r-count">50*</span></div></div><div><h1 class=3D"title-event">&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;<span class=3D"title-event-wrap">/*</span><a href=3D=
+"https://adventofcode.com/2021">2021</a><span class=3D"title-event-wrap">*/=
+</span></h1><nav><ul><li><a href=3D"https://adventofcode.com/2021">[Calenda=
+r]</a></li><li><a href=3D"https://adventofcode.com/2021/support">[AoC++]</a=
+></li><li><a href=3D"https://adventofcode.com/2021/sponsors">[Sponsors]</a>=
+</li><li><a href=3D"https://adventofcode.com/2021/leaderboard">[Leaderboard=
+]</a></li><li><a href=3D"https://adventofcode.com/2021/stats">[Stats]</a></=
+li></ul></nav></div></header>
+
+<div id=3D"sidebar">
+<div id=3D"sponsor"><div class=3D"quiet">Our <a href=3D"https://adventofcod=
+e.com/2021/sponsors">sponsors</a> help make Advent of Code possible:</div><=
+div class=3D"sponsor"><a href=3D"https://www.capitalone.com/tech/" target=
+=3D"_blank" rel=3D"noopener">Capital One</a> - Leverage technology in new a=
+nd powerful ways to pioneer change, all in the pursuit of changing banking =
+for good. Join us!</div></div>
+</div><!--/sidebar-->
+
+<main>
+
+<article class=3D"day-desc"><h2>--- Day 16: Packet Decoder ---</h2><p>As yo=
+u leave the cave and reach open waters, you receive a transmission from the=
+ Elves back on the ship.</p>
+<p>The transmission was sent using the Buoyancy Interchange Transmission Sy=
+stem (<span title=3D"Just be glad it wasn't sent using the BuoyancY Transmi=
+ssion Encoding System.">BITS</span>), a method of packing numeric expressio=
+ns into a binary sequence. Your submarine's computer has saved the transmis=
+sion in <a href=3D"https://en.wikipedia.org/wiki/Hexadecimal" target=3D"_bl=
+ank">hexadecimal</a> (your puzzle input).</p>
+<p>The first step of decoding the message is to convert the hexadecimal rep=
+resentation into binary. Each character of hexadecimal corresponds to four =
+bits of binary data:</p>
+<pre><code>0 =3D 0000
+1 =3D 0001
+2 =3D 0010
+3 =3D 0011
+4 =3D 0100
+5 =3D 0101
+6 =3D 0110
+7 =3D 0111
+8 =3D 1000
+9 =3D 1001
+A =3D 1010
+B =3D 1011
+C =3D 1100
+D =3D 1101
+E =3D 1110
+F =3D 1111
+</code></pre>
+<p>The BITS transmission contains a single <em>packet</em> at its outermost=
+ layer which itself contains many other packets. The hexadecimal representa=
+tion of this packet might encode a few extra <code>0</code> bits at the end=
+; these are not part of the transmission and should be ignored.</p>
+<p>Every packet begins with a standard header: the first three bits encode =
+the packet <em>version</em>, and the next three bits encode the packet <em>=
+type ID</em>. These two values are numbers; all numbers encoded in any pack=
+et are represented as binary with the most significant bit first. For examp=
+le, a version encoded as the binary sequence <code>100</code> represents th=
+e number <code>4</code>.</p>
+<p>Packets with type ID <code>4</code> represent a <em>literal value</em>. =
+Literal value packets encode a single binary number. To do this, the binary=
+ number is padded with leading zeroes until its length is a multiple of fou=
+r bits, and then it is broken into groups of four bits. Each group is prefi=
+xed by a <code>1</code> bit except the last group, which is prefixed by a <=
+code>0</code> bit. These groups of five bits immediately follow the packet =
+header. For example, the hexadecimal string <code>D2FE28</code> becomes:</p=
+>
+<pre><code>110100101111111000101000
+VVVTTTAAAAABBBBBCCCCC
+</code></pre>
+<p>Below each bit is a label indicating its purpose:</p>
+<ul>
+<li>The three bits labeled <code>V</code> (<code>110</code>) are the packet=
+ version, <code>6</code>.</li>
+<li>The three bits labeled <code>T</code> (<code>100</code>) are the packet=
+ type ID, <code>4</code>, which means the packet is a literal value.</li>
+<li>The five bits labeled <code>A</code> (<code>10111</code>) start with a =
+<code>1</code> (not the last group, keep reading) and contain the first fou=
+r bits of the number, <code>0111</code>.</li>
+<li>The five bits labeled <code>B</code> (<code>11110</code>) start with a =
+<code>1</code> (not the last group, keep reading) and contain four more bit=
+s of the number, <code>1110</code>.</li>
+<li>The five bits labeled <code>C</code> (<code>00101</code>) start with a =
+<code>0</code> (last group, end of packet) and contain the last four bits o=
+f the number, <code>0101</code>.</li>
+<li>The three unlabeled <code>0</code> bits at the end are extra due to the=
+ hexadecimal representation and should be ignored.</li>
+</ul>
+<p>So, this packet represents a literal value with binary representation <c=
+ode>011111100101</code>, which is <code>2021</code> in decimal.</p>
+<p>Every other type of packet (any packet with a type ID other than <code>4=
+</code>) represent an <em>operator</em> that performs some calculation on o=
+ne or more sub-packets contained within. Right now, the specific operations=
+ aren't important; focus on parsing the hierarchy of sub-packets.</p>
+<p>An operator packet contains one or more packets. To indicate which subse=
+quent binary data represents its sub-packets, an operator packet can use on=
+e of two modes indicated by the bit immediately after the packet header; th=
+is is called the <em>length type ID</em>:</p>
+<ul>
+<li>If the length type ID is <code>0</code>, then the next <em>15</em> bits=
+ are a number that represents the <em>total length in bits</em> of the sub-=
+packets contained by this packet.</li>
+<li>If the length type ID is <code>1</code>, then the next <em>11</em> bits=
+ are a number that represents the <em>number of sub-packets immediately con=
+tained</em> by this packet.</li>
+</ul>
+<p>Finally, after the length type ID bit and the 15-bit or 11-bit field, th=
+e sub-packets appear.</p>
+<p>For example, here is an operator packet (hexadecimal string <code>38006F=
+45291200</code>) with length type ID <code>0</code> that contains two sub-p=
+ackets:</p>
+<pre><code>00111000000000000110111101000101001010010001001000000000
+VVVTTTILLLLLLLLLLLLLLLAAAAAAAAAAABBBBBBBBBBBBBBBB
+</code></pre>
+<ul>
+<li>The three bits labeled <code>V</code> (<code>001</code>) are the packet=
+ version, <code>1</code>.</li>
+<li>The three bits labeled <code>T</code> (<code>110</code>) are the packet=
+ type ID, <code>6</code>, which means the packet is an operator.</li>
+<li>The bit labeled <code>I</code> (<code>0</code>) is the length type ID, =
+which indicates that the length is a 15-bit number representing the number =
+of bits in the sub-packets.</li>
+<li>The 15 bits labeled <code>L</code> (<code>000000000011011</code>) conta=
+in the length of the sub-packets in bits, <code>27</code>.</li>
+<li>The 11 bits labeled <code>A</code> contain the first sub-packet, a lite=
+ral value representing the number <code>10</code>.</li>
+<li>The 16 bits labeled <code>B</code> contain the second sub-packet, a lit=
+eral value representing the number <code>20</code>.</li>
+</ul>
+<p>After reading 11 and 16 bits of sub-packet data, the total length indica=
+ted in <code>L</code> (27) is reached, and so parsing of this packet stops.=
+</p>
+<p>As another example, here is an operator packet (hexadecimal string <code=
+>EE00D40C823060</code>) with length type ID <code>1</code> that contains th=
+ree sub-packets:</p>
+<pre><code>11101110000000001101010000001100100000100011000001100000
+VVVTTTILLLLLLLLLLLAAAAAAAAAAABBBBBBBBBBBCCCCCCCCCCC
+</code></pre>
+<ul>
+<li>The three bits labeled <code>V</code> (<code>111</code>) are the packet=
+ version, <code>7</code>.</li>
+<li>The three bits labeled <code>T</code> (<code>011</code>) are the packet=
+ type ID, <code>3</code>, which means the packet is an operator.</li>
+<li>The bit labeled <code>I</code> (<code>1</code>) is the length type ID, =
+which indicates that the length is a 11-bit number representing the number =
+of sub-packets.</li>
+<li>The 11 bits labeled <code>L</code> (<code>00000000011</code>) contain t=
+he number of sub-packets, <code>3</code>.</li>
+<li>The 11 bits labeled <code>A</code> contain the first sub-packet, a lite=
+ral value representing the number <code>1</code>.</li>
+<li>The 11 bits labeled <code>B</code> contain the second sub-packet, a lit=
+eral value representing the number <code>2</code>.</li>
+<li>The 11 bits labeled <code>C</code> contain the third sub-packet, a lite=
+ral value representing the number <code>3</code>.</li>
+</ul>
+<p>After reading 3 complete sub-packets, the number of sub-packets indicate=
+d in <code>L</code> (3) is reached, and so parsing of this packet stops.</p=
+>
+<p>For now, parse the hierarchy of the packets throughout the transmission =
+and <em>add up all of the version numbers</em>.</p>
+<p>Here are a few more examples of hexadecimal-encoded transmissions:</p>
+<ul>
+<li><code>8A004A801A8002F478</code> represents an operator packet (version =
+4) which contains an operator packet (version 1) which contains an operator=
+ packet (version 5) which contains a literal value (version 6); this packet=
+ has a version sum of <code><em>16</em></code>.</li>
+<li><code>620080001611562C8802118E34</code> represents an operator packet (=
+version 3) which contains two sub-packets; each sub-packet is an operator p=
+acket that contains two literal values. This packet has a version sum of <c=
+ode><em>12</em></code>.</li>
+<li><code>C0015000016115A2E0802F182340</code> has the same structure as the=
+ previous example, but the outermost packet uses a different length type ID=
+. This packet has a version sum of <code><em>23</em></code>.</li>
+<li><code>A0016C880162017C3686B18A3D4780</code> is an operator packet that =
+contains an operator packet that contains an operator packet that contains =
+five literal values; it has a version sum of <code><em>31</em></code>.</li>
+</ul>
+<p>Decode the structure of your hexadecimal-encoded BITS transmission; <em>=
+what do you get if you add up the version numbers in all packets?</em></p>
+</article>
+<p>Your puzzle answer was <code>977</code>.</p><article class=3D"day-desc">=
+<h2 id=3D"part2">--- Part Two ---</h2><p>Now that you have the structure of=
+ your transmission decoded, you can calculate the value of the expression i=
+t represents.</p>
+<p>Literal values (type ID <code>4</code>) represent a single number as des=
+cribed above. The remaining type IDs are more interesting:</p>
+<ul>
+<li>Packets with type ID <code>0</code> are <em>sum</em> packets - their va=
+lue is the sum of the values of their sub-packets. If they only have a sing=
+le sub-packet, their value is the value of the sub-packet.</li>
+<li>Packets with type ID <code>1</code> are <em>product</em> packets - thei=
+r value is the result of multiplying together the values of their sub-packe=
+ts. If they only have a single sub-packet, their value is the value of the =
+sub-packet.</li>
+<li>Packets with type ID <code>2</code> are <em>minimum</em> packets - thei=
+r value is the minimum of the values of their sub-packets.</li>
+<li>Packets with type ID <code>3</code> are <em>maximum</em> packets - thei=
+r value is the maximum of the values of their sub-packets.</li>
+<li>Packets with type ID <code>5</code> are <em>greater than</em> packets -=
+ their value is <em>1</em> if the value of the first sub-packet is greater =
+than the value of the second sub-packet; otherwise, their value is <em>0</e=
+m>. These packets always have exactly two sub-packets.</li>
+<li>Packets with type ID <code>6</code> are <em>less than</em> packets - th=
+eir value is <em>1</em> if the value of the first sub-packet is less than t=
+he value of the second sub-packet; otherwise, their value is <em>0</em>. Th=
+ese packets always have exactly two sub-packets.</li>
+<li>Packets with type ID <code>7</code> are <em>equal to</em> packets - the=
+ir value is <em>1</em> if the value of the first sub-packet is equal to the=
+ value of the second sub-packet; otherwise, their value is <em>0</em>. Thes=
+e packets always have exactly two sub-packets.</li>
+</ul>
+<p>Using these rules, you can now work out the value of the outermost packe=
+t in your BITS transmission.</p>
+<p>For example:</p>
+<ul>
+<li><code>C200B40A82</code> finds the sum of <code>1</code> and <code>2</co=
+de>, resulting in the value <code><em>3</em></code>.</li>
+<li><code>04005AC33890</code> finds the product of <code>6</code> and <code=
+>9</code>, resulting in the value <code><em>54</em></code>.</li>
+<li><code>880086C3E88112</code> finds the minimum of <code>7</code>, <code>=
+8</code>, and <code>9</code>, resulting in the value <code><em>7</em></code=
+>.</li>
+<li><code>CE00C43D881120</code> finds the maximum of <code>7</code>, <code>=
+8</code>, and <code>9</code>, resulting in the value <code><em>9</em></code=
+>.</li>
+<li><code>D8005AC2A8F0</code> produces <code>1</code>, because <code>5</cod=
+e> is less than <code>15</code>.</li>
+<li><code>F600BC2D8F</code> produces <code>0</code>, because <code>5</code>=
+ is not greater than <code>15</code>.</li>
+<li><code>9C005AC2F8F0</code> produces <code>0</code>, because <code>5</cod=
+e> is not equal to <code>15</code>.</li>
+<li><code>9C0141080250320F1802104A08</code> produces <code>1</code>, becaus=
+e <code>1</code> + <code>3</code> =3D <code>2</code> * <code>2</code>.</li>
+</ul>
+<p><em>What do you get if you evaluate the expression represented by your h=
+exadecimal-encoded BITS transmission?</em></p>
+</article>
+<p>Your puzzle answer was <code>101501020883</code>.</p><p class=3D"day-suc=
+cess">Both parts of this puzzle are complete! They provide two gold stars: =
+**</p>
+<p>At this point, all that is left is for you to <a href=3D"https://advento=
+fcode.com/2021">admire your Advent calendar</a>.</p>
+<p>If you still want to see it, you can <a href=3D"https://adventofcode.com=
+/2021/day/16/input" target=3D"_blank">get your puzzle input</a>.</p>
+<p>You can also <span class=3D"share">[Share<span class=3D"share-content">o=
+n
+  <a href=3D"https://twitter.com/intent/tweet?text=3DI%27ve+completed+%22Pa=
+cket+Decoder%22+%2D+Day+16+%2D+Advent+of+Code+2021&amp;url=3Dhttps%3A%2F%2F=
+adventofcode%2Ecom%2F2021%2Fday%2F16&amp;related=3Dericwastl&amp;hashtags=
+=3DAdventOfCode" target=3D"_blank">Twitter</a>
+  <a target=3D"_blank">Mastodon</a></span>]</span> this puzzle.</p>
+</main>
+
+<!-- ga -->
+
+<!-- /ga -->
+
+</body></html>
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-664aeb9e-000a-40c4-9f16-b971fb6c4882@mhtml.blink
+
+@charset "utf-8";
+
+article [title] { border-bottom: 1px dotted rgb(255, 255, 102); }
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro:300&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMRrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE=
+2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtM1rSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMVrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMprSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMZrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1=
+B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMdrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C=
+F, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrSlcZZJmOpw.woff") format("woff"); unic=
+ode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000=
+-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FF=
+FD; }
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/style.css?26
+
+@charset "utf-8";
+
+body { background: rgb(15, 15, 35); color: rgb(204, 204, 204); font-family:=
+ "Source Code Pro", monospace; font-size: 14pt; min-width: 60em; }
+
+img { border: 0px; }
+
+a { outline: 0px; }
+
+main, figure, figcaption { display: block; }
+
+pre, code { font-family: "Source Code Pro", monospace; }
+
+header, main { text-size-adjust: none; }
+
+a { text-decoration: none; color: rgb(0, 153, 0); }
+
+a:hover, a:focus { color: rgb(153, 255, 153); }
+
+h1, h2 { font-size: 1em; font-weight: normal; }
+
+code { position: relative; display: inline-block; margin: 0px; padding: 0px=
+; }
+
+code::before { z-index: -1; content: ""; position: absolute; display: block=
+; inset: 3px -2px 0px; border: 1px solid rgb(51, 51, 64); background: rgb(1=
+6, 16, 26); }
+
+pre.wrap { max-width: 100%; white-space: pre-wrap; }
+
+.quiet { opacity: 0.5; }
+
+p.wrap { width: 45em; }
+
+.hidden-layout { padding: 0px 0.5em; border: 1px solid transparent; }
+
+.hidden { border: 1px dotted gray; overflow: hidden; position: relative; pa=
+dding: 0px 0.5em; }
+
+.hidden::before { content: "(hover to view)"; position: absolute; opacity: =
+0.5; text-align: center; left: 0px; top: 0px; width: 100%; }
+
+.hidden > * { visibility: hidden; }
+
+.hidden:hover { border-color: transparent; }
+
+.hidden:hover::before { display: none; }
+
+.hidden:hover > * { visibility: visible; }
+
+.warning:not(.warning-active) { transition: color 1s ease 0s, opacity 1s ea=
+se 0s; }
+
+.warning-active { color: rgb(255, 0, 0); opacity: 1; }
+
+.star-count { color: rgb(255, 255, 102); }
+
+.supporter-badge { color: rgb(255, 255, 102); }
+
+a.supporter-badge:hover, a.supporter-badge:focus { text-decoration: none; c=
+olor: rgb(255, 255, 204); text-shadow: rgb(255, 255, 102) 0px 0px 5px; }
+
+.sponsor-badge { color: rgb(121, 162, 216); }
+
+a.sponsor-badge:hover, a.sponsor-badge:focus { text-decoration: none; color=
+: rgb(204, 219, 237); text-shadow: rgb(121, 162, 216) 0px 0px 5px; }
+
+#sidebar { width: 200px; float: right; margin: 0px 15px 2em 2em; position: =
+relative; z-index: 10; }
+
+#sponsor { margin-bottom: 2.5em; }
+
+header { white-space: nowrap; cursor: default; z-index: 100; margin-bottom:=
+ 2em; }
+
+header h1 { display: inline-block; margin: 0px; padding-right: 1em; }
+
+header h1 a, header h1 span { display: inline-block; text-decoration: none;=
+ color: rgb(0, 204, 0); text-shadow: rgb(0, 204, 0) 0px 0px 2px, rgb(0, 204=
+, 0) 0px 0px 5px; }
+
+header h1 a:hover, header h1 a:focus { color: rgb(153, 255, 153); text-shad=
+ow: rgb(153, 255, 153) 0px 0px 2px, rgb(153, 255, 153) 0px 0px 5px; }
+
+header h1.title-event .title-event-wrap { opacity: 0.33; white-space: pre; =
+}
+
+header .user { display: inline-block; padding-left: 1em; }
+
+header nav { display: inline-block; }
+
+header nav ul { list-style-type: none; padding: 0px; margin: 0px; display: =
+inline-block; }
+
+header nav li { display: inline-block; padding: 0px 0.6em; }
+
+header nav a { display: inline-block; text-decoration: none; outline: none;=
+ }
+
+input[type=3D"text"], textarea { color: inherit; border: 1px solid rgb(102,=
+ 102, 102); background: rgb(16, 16, 26); padding: 0px 2px; font-family: inh=
+erit; font-size: inherit; margin: 0px; }
+
+textarea { vertical-align: top; }
+
+label img { vertical-align: bottom; position: relative; top: -3px; margin-r=
+ight: 0.3em; }
+
+input[type=3D"radio"] { display: none; }
+
+input[type=3D"radio"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"radio"] ~ span::before { content: "( ) "; }
+
+input[type=3D"radio"] ~ span:hover, input[type=3D"radio"] ~ span:focus { ba=
+ckground-color: rgb(25, 25, 59); }
+
+input[type=3D"radio"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"radio"]:checked ~ span::before { content: "(O) "; }
+
+input[type=3D"checkbox"] { display: none; }
+
+input[type=3D"checkbox"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"checkbox"] ~ span::before { content: "[ ] "; }
+
+input[type=3D"checkbox"] ~ span:hover, input[type=3D"checkbox"] ~ span:focu=
+s { background-color: rgb(25, 25, 59); }
+
+input[type=3D"checkbox"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"checkbox"]:checked ~ span::before { content: "[X] "; }
+
+input[type=3D"checkbox"]:disabled ~ span { opacity: 0.3; cursor: default; }
+
+input[type=3D"checkbox"]:disabled ~ span::before { content: "[-] "; }
+
+input[type=3D"checkbox"]:disabled ~ span:hover { background-color: transpar=
+ent; }
+
+input[type=3D"submit"] { background: transparent; border: 0px; font-family:=
+ inherit; font-size: inherit; margin: 0px; padding: 0px; color: rgb(0, 153,=
+ 0); cursor: pointer; }
+
+input[type=3D"submit"]:hover, input[type=3D"submit"]:focus { color: rgb(153=
+, 255, 153); }
+
+article { width: 45em; margin-bottom: 2em; margin-top: 2em; }
+
+article:first-child { margin-top: 0px; }
+
+article h2 { color: rgb(255, 255, 255); margin-top: 1em; margin-bottom: 1em=
+; white-space: nowrap; }
+
+article h2 + * { margin-top: 0px; }
+
+article em { color: rgb(255, 255, 255); font-style: normal; text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+article em.star { color: rgb(255, 255, 102); font-style: normal; text-shado=
+w: rgb(255, 255, 102) 0px 0px 5px; }
+
+article a { white-space: nowrap; }
+
+article .aside { opacity: 0.6; }
+
+article ul { list-style-type: none; padding: 0px; }
+
+article li { padding-left: 2.5em; position: relative; }
+
+article li::before { content: "=C2=A0=C2=A0-=C2=A0"; position: absolute; le=
+ft: 0px; top: 0px; }
+
+.day-success { color: rgb(255, 255, 102); text-shadow: rgb(255, 255, 102) 0=
+px 0px 5px; }
+
+form#settings input[type=3D"radio"] ~ span { min-width: 30em; }
+
+form#settings input[type=3D"checkbox"] ~ span { min-width: 30em; }
+
+.share { color: rgb(0, 153, 0); cursor: default; transition: color 0.2s eas=
+e 1s; }
+
+.share:hover, .share:focus-within { color: rgb(170, 255, 170); transition: =
+color 0.2s ease 0s; }
+
+.share .share-content { display: inline-block; vertical-align: text-bottom;=
+ white-space: nowrap; overflow: hidden; max-width: 0px; transition: max-wid=
+th 0.2s ease 1s; }
+
+.share .share-content::before { content: "=C2=A0"; }
+
+.share .share-content::after { }
+
+.share:hover .share-content, .share:focus-within .share-content { max-width=
+: 45em; transition: max-width 0.2s ease 0s; }
+
+.puzzle-input { border: 1px solid rgb(153, 153, 153); background: rgb(51, 5=
+1, 51); color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+
+.calendar { cursor: default; user-select: none; }
+
+.calendar > span { color: rgb(51, 51, 51); }
+
+.calendar > a { text-decoration: none; color: rgb(102, 102, 102); outline: =
+none; cursor: default; }
+
+.calendar a:hover, .calendar a:focus { background-color: rgba(119, 119, 165=
+, 0.2); cursor: pointer; }
+
+#calendar-countdown { padding-left: 0.5em; color: rgb(204, 204, 204); }
+
+.calendar .calendar-day { color: rgb(102, 102, 102); }
+
+.calendar a .calendar-day { color: rgb(204, 204, 204); }
+
+.calendar a .calendar-mark-complete, .calendar a .calendar-mark-verycomplet=
+e { visibility: hidden; }
+
+.calendar a.calendar-complete .calendar-mark-complete, .calendar a.calendar=
+-verycomplete .calendar-mark-complete { visibility: visible; color: rgb(255=
+, 255, 102); }
+
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete { visibility:=
+ visible; color: rgb(255, 255, 102); }
+
+.calendar .calendar-day-new { animation: 5s ease 0s 1 normal none running a=
+nim-day-new; }
+
+.calendar .calendar-day-new .calendar-day { animation: 5s ease 0s 1 normal =
+none running anim-day-new-day; }
+
+@keyframes anim-day-new {=20
+  0% { color: rgb(51, 51, 51); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+}
+
+@keyframes anim-day-new-day {=20
+  0% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(204, 204, 204); text-shadow: transparent 0px 0px 5px; }
+}
+
+.eventlist-event { white-space: pre; }
+
+.stats > span, .stats > span .stats-firstonly, .stats > span .stats-both { =
+color: rgb(102, 102, 102); }
+
+.stats > a { color: rgb(204, 204, 204); min-width: 35em; display: inline-bl=
+ock; }
+
+.stats > a:hover, .stats > a:focus { background-color: rgb(30, 30, 70); }
+
+.stats-firstonly { color: rgb(153, 153, 204); }
+
+.stats-both { color: rgb(255, 255, 102); }
+
+.leaderboard-daylinks { cursor: default; }
+
+.leaderboard-daylinks-selected { color: rgb(255, 255, 255); text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+.leaderboard-daydesc-first { color: rgb(153, 153, 204); }
+
+.leaderboard-daydesc-both { color: rgb(255, 255, 102); }
+
+.leaderboard-entry { white-space: pre; }
+
+.leaderboard-entry .leaderboard-totalscore { color: rgb(255, 255, 255); }
+
+.leaderboard-anon { opacity: 0.6; }
+
+.leaderboard-userphoto { display: inline-block; height: 20px; width: 20px; =
+margin: 0px 0.5em; text-align: center; }
+
+.leaderboard-userphoto img { height: 20px; max-width: 20px; vertical-align:=
+ middle; position: relative; top: -2px; }
+
+.leaderboard-time { opacity: 0.5; }
+
+.privboard-row { white-space: pre; }
+
+.privboard-name { vertical-align: text-bottom; }
+
+.privboard-days > span { display: inline-block; color: rgb(51, 51, 51); }
+
+.privboard-days > a { display: inline-block; }
+
+.privboard-star-locked { visibility: hidden; }
+
+.privboard-star-unlocked { color: rgb(51, 51, 51); }
+
+.privboard-star-firstonly { color: rgb(153, 153, 204); }
+
+.privboard-star-both { color: rgb(255, 255, 102); }
+
+.privboard-delbtn { opacity: 0.33; }
+
+.privboard-row:hover .privboard-delbtn { opacity: 1; }
+
+.sponsors { width: 46em; }
+
+.sponsor { margin: 1em 0px; }
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/highcontrast.css?0
+
+@charset "utf-8";
+
+* { background: white !important; color: black !important; text-shadow: non=
+e !important; }
+
+a { color: rgb(0, 0, 255) !important; text-decoration: underline !important=
+; }
+
+em { font-weight: 900 !important; }
+------MultipartBoundary--pRPOwQNOaKsORL3Ra20fQ7EYAuPA2jwen8Hatibmj1------

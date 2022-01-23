@@ -1,0 +1,878 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://adventofcode.com/2021/day/25
+Subject: Day 25 - Advent of Code 2021
+Date: Sat, 25 Dec 2021 07:40:04 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----"
+
+
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----
+Content-Type: text/html
+Content-ID: <frame-7BA2AE0755F57493D865DEA2F640E4EC@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/2021/day/25
+
+<!DOCTYPE html><html lang=3D"en-us"><head><meta http-equiv=3D"Content-Type"=
+ content=3D"text/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"te=
+xt/css" href=3D"cid:css-c404ed43-a816-4f82-bfb9-8a62af883c93@mhtml.blink" /=
+>
+
+<title>Day 25 - Advent of Code 2021</title>
+<!--[if lt IE 9]><script src=3D"/static/html5.js"></script><![endif]-->
+<link href=3D"https://fonts.googleapis.com/css?family=3DSource+Code+Pro:300=
+&amp;subset=3Dlatin,latin-ext" rel=3D"stylesheet" type=3D"text/css">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://adventofcode.com=
+/static/style.css?26">
+<link rel=3D"stylesheet alternate" type=3D"text/css" href=3D"https://advent=
+ofcode.com/static/highcontrast.css?0" title=3D"High Contrast">
+<link rel=3D"shortcut icon" href=3D"https://adventofcode.com/favicon.png">
+</head><!--
+
+
+
+
+Oh, hello!  Funny seeing you here.
+
+I appreciate your enthusiasm, but you aren't going to find much down here.
+There certainly aren't clues to any of the puzzles.  The best surprises don=
+'t
+even appear in the source until you unlock them for real.
+
+Please be careful with automated requests; I'm not a massive company, and I=
+ can
+only take so much traffic.  Please be considerate so that everyone gets to =
+play.
+
+If you're curious about how Advent of Code works, it's running on some cust=
+om
+Perl code. Other than a few integrations (auth, analytics, social media), I
+built the whole thing myself, including the design, animations, prose, and =
+all
+of the puzzles.
+
+The puzzles are most of the work; preparing a new calendar and a new set of
+puzzles each year takes all of my free time for 4-5 months. A lot of effort
+went into building this thing - I hope you're enjoying playing it as much a=
+s I
+enjoyed making it for you!
+
+If you'd like to hang out, I'm @ericwastl on Twitter.
+
+- Eric Wastl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+<body>
+<header><div><h1 class=3D"title-global"><a href=3D"https://adventofcode.com=
+/">Advent of Code</a></h1><nav><ul><li><a href=3D"https://adventofcode.com/=
+2021/about">[About]</a></li><li><a href=3D"https://adventofcode.com/2021/ev=
+ents">[Events]</a></li><li><a href=3D"https://teespring.com/stores/advent-o=
+f-code" target=3D"_blank">[Shop]</a></li><li><a href=3D"https://adventofcod=
+e.com/2021/settings">[Settings]</a></li><li><a href=3D"https://adventofcode=
+.com/2021/auth/logout">[Log Out]</a></li></ul></nav><div class=3D"user">Mik=
+los Sagi <a href=3D"https://adventofcode.com/2021/support" class=3D"support=
+er-badge" title=3D"Advent of Code Supporter">(AoC++)</a> <span class=3D"sta=
+r-count">50*</span></div></div><div><h1 class=3D"title-event">&nbsp;&nbsp;&=
+nbsp;<span class=3D"title-event-wrap">var y=3D</span><a href=3D"https://adv=
+entofcode.com/2021">2021</a><span class=3D"title-event-wrap">;</span></h1><=
+nav><ul><li><a href=3D"https://adventofcode.com/2021">[Calendar]</a></li><l=
+i><a href=3D"https://adventofcode.com/2021/support">[AoC++]</a></li><li><a =
+href=3D"https://adventofcode.com/2021/sponsors">[Sponsors]</a></li><li><a h=
+ref=3D"https://adventofcode.com/2021/leaderboard">[Leaderboard]</a></li><li=
+><a href=3D"https://adventofcode.com/2021/stats">[Stats]</a></li></ul></nav=
+></div></header>
+
+<div id=3D"sidebar">
+<div id=3D"sponsor"><div class=3D"quiet">Our <a href=3D"https://adventofcod=
+e.com/2021/sponsors">sponsors</a> help make Advent of Code possible:</div><=
+div class=3D"sponsor"><a href=3D"https://www.americanexpress.com/techcareer=
+s" target=3D"_blank" rel=3D"noopener">American Express</a> - Work with the =
+latest tech and back the engineering community through open source. Find yo=
+ur place in tech on #TeamAmex.</div></div>
+</div><!--/sidebar-->
+
+<main>
+
+<article class=3D"day-desc"><h2>--- Day 25: Sea Cucumber ---</h2><p>This is=
+ it: the bottom of the ocean trench, the last place the sleigh keys could b=
+e. Your submarine's experimental antenna <em>still isn't boosted enough</em=
+> to detect the keys, but they <em>must</em> be here. All you need to do is=
+ <em>reach the seafloor</em> and find them.</p>
+<p>At least, you'd touch down on the seafloor if you could; unfortunately, =
+it's completely covered by two large herds of <a href=3D"https://en.wikiped=
+ia.org/wiki/Sea_cucumber" target=3D"_blank">sea cucumbers</a>, and there is=
+n't an open space large enough for your submarine.</p>
+<p>You suspect that the Elves must have done this before, because just then=
+ you discover the phone number of a deep-sea marine biologist on a handwrit=
+ten note taped to the wall of the submarine's cockpit.</p>
+<p>"Sea cucumbers? Yeah, they're probably hunting for food. But don't worry=
+, they're predictable critters: they move in perfectly straight lines, only=
+ moving forward when there's space to do so. They're actually quite polite!=
+"</p>
+<p>You explain that you'd like to predict when you could land your submarin=
+e.</p>
+<p>"Oh that's easy, they'll eventually pile up and leave enough space for--=
+ wait, did you say submarine? And the only place with that many sea cucumbe=
+rs would be at the very bottom of the Mariana--" You hang up the phone.</p>
+<p>There are two herds of sea cucumbers sharing the same region; one always=
+ moves <em>east</em> (<code>&gt;</code>), while the other always moves <em>=
+south</em> (<code>v</code>). Each location can contain at most one sea cucu=
+mber; the remaining locations are <em>empty</em> (<code>.</code>). The subm=
+arine helpfully generates a map of the situation (your puzzle input). For e=
+xample:</p>
+<pre><code>v...&gt;&gt;.vv&gt;
+.vv&gt;&gt;.vv..
+&gt;&gt;.&gt;v&gt;...v
+&gt;&gt;v&gt;&gt;.&gt;.v.
+v&gt;v.vv.v..
+&gt;.&gt;&gt;..v...
+.vv..&gt;.&gt;v.
+v.v..&gt;&gt;v.v
+....v..v.&gt;
+</code></pre>
+<p>Every <em>step</em>, the sea cucumbers in the east-facing herd attempt t=
+o move forward one location, then the sea cucumbers in the south-facing her=
+d attempt to move forward one location. When a herd moves forward, every se=
+a cucumber in the herd first simultaneously considers whether there is a se=
+a cucumber in the adjacent location it's facing (even another sea cucumber =
+facing the same direction), and then every sea cucumber facing an empty loc=
+ation simultaneously moves into that location.</p>
+<p>So, in a situation like this:</p>
+<pre><code>...&gt;&gt;&gt;&gt;&gt;...</code></pre>
+<p>After one step, only the rightmost sea cucumber would have moved:</p>
+<pre><code>...&gt;&gt;&gt;&gt;.&gt;..</code></pre>
+<p>After the next step, two sea cucumbers move:</p>
+<pre><code>...&gt;&gt;&gt;.&gt;.&gt;.</code></pre>
+<p>During a single step, the east-facing herd moves first, then the south-f=
+acing herd moves. So, given this situation:</p>
+<pre><code>..........
+.&gt;v....v..
+.......&gt;..
+..........
+</code></pre>
+<p>After a single step, of the sea cucumbers on the left, only the south-fa=
+cing sea cucumber has moved (as it wasn't out of the way in time for the ea=
+st-facing cucumber on the left to move), but both sea cucumbers on the righ=
+t have moved (as the east-facing sea cucumber moved out of the way of the s=
+outh-facing sea cucumber):</p>
+<pre><code>..........
+.&gt;........
+..v....v&gt;.
+..........
+</code></pre>
+<p>Due to <em>strong water currents</em> in the area, sea cucumbers that mo=
+ve off the right edge of the map appear on the left edge, and sea cucumbers=
+ that move off the bottom edge of the map appear on the top edge. Sea cucum=
+bers always check whether their destination location is empty before moving=
+, even if that destination is on the opposite side of the map:</p>
+<pre><code>Initial state:
+...&gt;...
+.......
+......&gt;
+v.....&gt;
+......&gt;
+.......
+..vvv..
+
+After 1 step:
+..vv&gt;..
+.......
+&gt;......
+v.....&gt;
+&gt;......
+.......
+....v..
+
+After 2 steps:
+....v&gt;.
+..vv...
+.&gt;.....
+......&gt;
+v&gt;.....
+.......
+.......
+
+After 3 steps:
+......&gt;
+..v.v..
+..&gt;v...
+&gt;......
+..&gt;....
+v......
+.......
+
+After 4 steps:
+&gt;......
+..v....
+..&gt;.v..
+.&gt;.v...
+...&gt;...
+.......
+v......
+</code></pre>
+<p>To find a safe place to land your submarine, the sea cucumbers need to s=
+top moving. Again consider the first example:</p>
+<pre><code>Initial state:
+v...&gt;&gt;.vv&gt;
+.vv&gt;&gt;.vv..
+&gt;&gt;.&gt;v&gt;...v
+&gt;&gt;v&gt;&gt;.&gt;.v.
+v&gt;v.vv.v..
+&gt;.&gt;&gt;..v...
+.vv..&gt;.&gt;v.
+v.v..&gt;&gt;v.v
+....v..v.&gt;
+
+After 1 step:
+....&gt;.&gt;v.&gt;
+v.v&gt;.&gt;v.v.
+&gt;v&gt;&gt;..&gt;v..
+&gt;&gt;v&gt;v&gt;.&gt;.v
+.&gt;v.v...v.
+v&gt;&gt;.&gt;vvv..
+..v...&gt;&gt;..
+vv...&gt;&gt;vv.
+&gt;.v.v..v.v
+
+After 2 steps:
+&gt;.v.v&gt;&gt;..v
+v.v.&gt;&gt;vv..
+&gt;v&gt;.&gt;.&gt;.v.
+&gt;&gt;v&gt;v.&gt;v&gt;.
+.&gt;..v....v
+.&gt;v&gt;&gt;.v.v.
+v....v&gt;v&gt;.
+.vv..&gt;&gt;v..
+v&gt;.....vv.
+
+After 3 steps:
+v&gt;v.v&gt;.&gt;v.
+v...&gt;&gt;.v.v
+&gt;vv&gt;.&gt;v&gt;..
+&gt;&gt;v&gt;v.&gt;.v&gt;
+..&gt;....v..
+.&gt;.&gt;v&gt;v..v
+..v..v&gt;vv&gt;
+v.v..&gt;&gt;v..
+.v&gt;....v..
+
+After 4 steps:
+v&gt;..v.&gt;&gt;..
+v.v.&gt;.&gt;.v.
+&gt;vv.&gt;&gt;.v&gt;v
+&gt;&gt;.&gt;..v&gt;.&gt;
+..v&gt;v...v.
+..&gt;&gt;.&gt;vv..
+&gt;.v.vv&gt;v.v
+.....&gt;&gt;vv.
+vvv&gt;...v..
+
+After 5 steps:
+vv&gt;...&gt;v&gt;.
+v.v.v&gt;.&gt;v.
+&gt;.v.&gt;.&gt;.&gt;v
+&gt;v&gt;.&gt;..v&gt;&gt;
+..v&gt;v.v...
+..&gt;.&gt;&gt;vvv.
+.&gt;...v&gt;v..
+..v.v&gt;&gt;v.v
+v.v.&gt;...v.
+
+...
+
+After 10 steps:
+..&gt;..&gt;&gt;vv.
+v.....&gt;&gt;.v
+..v.v&gt;&gt;&gt;v&gt;
+v&gt;.&gt;v.&gt;&gt;&gt;.
+..v&gt;v.vv.v
+.v.&gt;&gt;&gt;.v..
+v.v..&gt;v&gt;..
+..v...&gt;v.&gt;
+.vv..v&gt;vv.
+
+...
+
+After 20 steps:
+v&gt;.....&gt;&gt;.
+&gt;vv&gt;.....v
+.&gt;v&gt;v.vv&gt;&gt;
+v&gt;&gt;&gt;v.&gt;v.&gt;
+....vv&gt;v..
+.v.&gt;&gt;&gt;vvv.
+..v..&gt;&gt;vv.
+v.v...&gt;&gt;.v
+..v.....v&gt;
+
+...
+
+After 30 steps:
+.vv.v..&gt;&gt;&gt;
+v&gt;...v...&gt;
+&gt;.v&gt;.&gt;vv.&gt;
+&gt;v&gt;.&gt;.&gt;v.&gt;
+.&gt;..v.vv..
+..v&gt;..&gt;&gt;v.
+....v&gt;..&gt;v
+v.v...&gt;vv&gt;
+v.v...&gt;vvv
+
+...
+
+After 40 steps:
+&gt;&gt;v&gt;v..v..
+..&gt;&gt;v..vv.
+..&gt;&gt;&gt;v.&gt;.v
+..&gt;&gt;&gt;&gt;vvv&gt;
+v.....&gt;...
+v.v...&gt;v&gt;&gt;
+&gt;vv.....v&gt;
+.&gt;v...v.&gt;v
+vvv.v..v.&gt;
+
+...
+
+After 50 steps:
+..&gt;&gt;v&gt;vv.v
+..v.&gt;&gt;vv..
+v.&gt;&gt;v&gt;&gt;v..
+..&gt;&gt;&gt;&gt;&gt;vv.
+vvv....&gt;vv
+..v....&gt;&gt;&gt;
+v&gt;.......&gt;
+.vv&gt;....v&gt;
+.&gt;v.vv.v..
+
+...
+
+After 55 steps:
+..&gt;&gt;v&gt;vv..
+..v.&gt;&gt;vv..
+..&gt;&gt;v&gt;&gt;vv.
+..&gt;&gt;&gt;&gt;&gt;vv.
+v......&gt;vv
+v&gt;v....&gt;&gt;v
+vvv...&gt;..&gt;
+&gt;vv.....&gt;.
+.&gt;v.vv.v..
+
+After 56 steps:
+..&gt;&gt;v&gt;vv..
+..v.&gt;&gt;vv..
+..&gt;&gt;v&gt;&gt;vv.
+..&gt;&gt;&gt;&gt;&gt;vv.
+v......&gt;vv
+v&gt;v....&gt;&gt;v
+vvv....&gt;.&gt;
+&gt;vv......&gt;
+.&gt;v.vv.v..
+
+After 57 steps:
+..&gt;&gt;v&gt;vv..
+..v.&gt;&gt;vv..
+..&gt;&gt;v&gt;&gt;vv.
+..&gt;&gt;&gt;&gt;&gt;vv.
+v......&gt;vv
+v&gt;v....&gt;&gt;v
+vvv.....&gt;&gt;
+&gt;vv......&gt;
+.&gt;v.vv.v..
+
+After 58 steps:
+..&gt;&gt;v&gt;vv..
+..v.&gt;&gt;vv..
+..&gt;&gt;v&gt;&gt;vv.
+..&gt;&gt;&gt;&gt;&gt;vv.
+v......&gt;vv
+v&gt;v....&gt;&gt;v
+vvv.....&gt;&gt;
+&gt;vv......&gt;
+.&gt;v.vv.v..
+</code></pre>
+<p>In this example, the sea cucumbers stop moving after <code><em>58</em></=
+code> steps.</p>
+<p>Find somewhere safe to land your submarine. <em>What is the first step o=
+n which no sea cucumbers move?</em></p>
+</article>
+<p>Your puzzle answer was <code>308</code>.</p><article class=3D"day-desc">=
+<h2 id=3D"part2">--- Part Two ---</h2><p>Suddenly, the experimental antenna=
+ control console lights up:</p>
+<pre><code><em>Sleigh keys detected!</em></code></pre>
+<p>According to the console, the keys are <em>directly under the submarine<=
+/em>. <span title=3D"Thanks to the deep-sea marine biologist, who apparentl=
+y works at the Biham-Middleton-Levine oceanic research institute.">You land=
+ed</span> right on them! Using a robotic arm on the submarine, you move the=
+ sleigh keys into the airlock.</p>
+<p>Now, you just need to get them to Santa in time to save Christmas! You c=
+heck your clock - it <em>is</em> Christmas. There's no way you can get them=
+ back to the surface in time.</p>
+<p>Just as you start to lose hope, you notice a button on the sleigh keys: =
+<em>remote start</em>. You can start the sleigh from the bottom of the ocea=
+n! You just need some way to <em>boost the signal</em> from the keys so it =
+actually reaches the sleigh. Good thing the submarine has that experimental=
+ antenna! You'll definitely need <em class=3D"star">50 stars</em> to boost =
+it that far, though.</p>
+<p>The experimental antenna control console lights up again:</p>
+<pre><code><em>Energy source detected.
+Integrating energy source from device "sleigh keys"...done.
+Installing device drivers...done.
+Recalibrating experimental antenna...done.
+Boost strength due to matching signal phase: <em class=3D"star">1 star</em>
+</em></code></pre>
+<p>Only <em class=3D"star">49 stars</em> to go.</p>
+</article>
+<form method=3D"post" action=3D"https://adventofcode.com/2021/day/25/answer=
+"><p>If you like, you can <input type=3D"submit" value=3D"[Remotely Start T=
+he Sleigh Again]">.</p></form>
+<p class=3D"day-success">Both parts of this puzzle are complete! They provi=
+de two gold stars: **</p>
+<p>At this point, all that is left is for you to <a href=3D"https://advento=
+fcode.com/2021">admire your Advent calendar</a>.</p>
+<p>If you still want to see it, you can <a href=3D"https://adventofcode.com=
+/2021/day/25/input" target=3D"_blank">get your puzzle input</a>.</p>
+<p>You can also <span class=3D"share">[Share<span class=3D"share-content">o=
+n
+  <a href=3D"https://twitter.com/intent/tweet?text=3DI%27ve+completed+%22Se=
+a+Cucumber%22+%2D+Day+25+%2D+Advent+of+Code+2021&amp;url=3Dhttps%3A%2F%2Fad=
+ventofcode%2Ecom%2F2021%2Fday%2F25&amp;related=3Dericwastl&amp;hashtags=3DA=
+dventOfCode" target=3D"_blank">Twitter</a>
+  <a target=3D"_blank">Mastodon</a></span>]</span> this puzzle.</p>
+</main>
+
+<!-- ga -->
+
+<!-- /ga -->
+
+</body></html>
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-c404ed43-a816-4f82-bfb9-8a62af883c93@mhtml.blink
+
+@charset "utf-8";
+
+article [title] { border-bottom: 1px dotted rgb(255, 255, 102); }
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro:300&subset=latin,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMRrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE=
+2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtM1rSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMVrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMprSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMZrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1=
+B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMdrSlcZZJmOpwVS.woff") format("woff"); un=
+icode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20C=
+F, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 300; src: url("https://fonts.gstatic.com/s/sourcecodepro/v18/HI_diYsKILx=
+Rpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrSlcZZJmOpw.woff") format("woff"); unic=
+ode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000=
+-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FF=
+FD; }
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/style.css?26
+
+@charset "utf-8";
+
+body { background: rgb(15, 15, 35); color: rgb(204, 204, 204); font-family:=
+ "Source Code Pro", monospace; font-size: 14pt; min-width: 60em; }
+
+img { border: 0px; }
+
+a { outline: 0px; }
+
+main, figure, figcaption { display: block; }
+
+pre, code { font-family: "Source Code Pro", monospace; }
+
+header, main { text-size-adjust: none; }
+
+a { text-decoration: none; color: rgb(0, 153, 0); }
+
+a:hover, a:focus { color: rgb(153, 255, 153); }
+
+h1, h2 { font-size: 1em; font-weight: normal; }
+
+code { position: relative; display: inline-block; margin: 0px; padding: 0px=
+; }
+
+code::before { z-index: -1; content: ""; position: absolute; display: block=
+; inset: 3px -2px 0px; border: 1px solid rgb(51, 51, 64); background: rgb(1=
+6, 16, 26); }
+
+pre.wrap { max-width: 100%; white-space: pre-wrap; }
+
+.quiet { opacity: 0.5; }
+
+p.wrap { width: 45em; }
+
+.hidden-layout { padding: 0px 0.5em; border: 1px solid transparent; }
+
+.hidden { border: 1px dotted gray; overflow: hidden; position: relative; pa=
+dding: 0px 0.5em; }
+
+.hidden::before { content: "(hover to view)"; position: absolute; opacity: =
+0.5; text-align: center; left: 0px; top: 0px; width: 100%; }
+
+.hidden > * { visibility: hidden; }
+
+.hidden:hover { border-color: transparent; }
+
+.hidden:hover::before { display: none; }
+
+.hidden:hover > * { visibility: visible; }
+
+.warning:not(.warning-active) { transition: color 1s ease 0s, opacity 1s ea=
+se 0s; }
+
+.warning-active { color: rgb(255, 0, 0); opacity: 1; }
+
+.star-count { color: rgb(255, 255, 102); }
+
+.supporter-badge { color: rgb(255, 255, 102); }
+
+a.supporter-badge:hover, a.supporter-badge:focus { text-decoration: none; c=
+olor: rgb(255, 255, 204); text-shadow: rgb(255, 255, 102) 0px 0px 5px; }
+
+.sponsor-badge { color: rgb(121, 162, 216); }
+
+a.sponsor-badge:hover, a.sponsor-badge:focus { text-decoration: none; color=
+: rgb(204, 219, 237); text-shadow: rgb(121, 162, 216) 0px 0px 5px; }
+
+#sidebar { width: 200px; float: right; margin: 0px 15px 2em 2em; position: =
+relative; z-index: 10; }
+
+#sponsor { margin-bottom: 2.5em; }
+
+header { white-space: nowrap; cursor: default; z-index: 100; margin-bottom:=
+ 2em; }
+
+header h1 { display: inline-block; margin: 0px; padding-right: 1em; }
+
+header h1 a, header h1 span { display: inline-block; text-decoration: none;=
+ color: rgb(0, 204, 0); text-shadow: rgb(0, 204, 0) 0px 0px 2px, rgb(0, 204=
+, 0) 0px 0px 5px; }
+
+header h1 a:hover, header h1 a:focus { color: rgb(153, 255, 153); text-shad=
+ow: rgb(153, 255, 153) 0px 0px 2px, rgb(153, 255, 153) 0px 0px 5px; }
+
+header h1.title-event .title-event-wrap { opacity: 0.33; white-space: pre; =
+}
+
+header .user { display: inline-block; padding-left: 1em; }
+
+header nav { display: inline-block; }
+
+header nav ul { list-style-type: none; padding: 0px; margin: 0px; display: =
+inline-block; }
+
+header nav li { display: inline-block; padding: 0px 0.6em; }
+
+header nav a { display: inline-block; text-decoration: none; outline: none;=
+ }
+
+input[type=3D"text"], textarea { color: inherit; border: 1px solid rgb(102,=
+ 102, 102); background: rgb(16, 16, 26); padding: 0px 2px; font-family: inh=
+erit; font-size: inherit; margin: 0px; }
+
+textarea { vertical-align: top; }
+
+label img { vertical-align: bottom; position: relative; top: -3px; margin-r=
+ight: 0.3em; }
+
+input[type=3D"radio"] { display: none; }
+
+input[type=3D"radio"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"radio"] ~ span::before { content: "( ) "; }
+
+input[type=3D"radio"] ~ span:hover, input[type=3D"radio"] ~ span:focus { ba=
+ckground-color: rgb(25, 25, 59); }
+
+input[type=3D"radio"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"radio"]:checked ~ span::before { content: "(O) "; }
+
+input[type=3D"checkbox"] { display: none; }
+
+input[type=3D"checkbox"] ~ span { cursor: pointer; display: inline-block; }
+
+input[type=3D"checkbox"] ~ span::before { content: "[ ] "; }
+
+input[type=3D"checkbox"] ~ span:hover, input[type=3D"checkbox"] ~ span:focu=
+s { background-color: rgb(25, 25, 59); }
+
+input[type=3D"checkbox"]:checked ~ span { color: rgb(255, 255, 255); }
+
+input[type=3D"checkbox"]:checked ~ span::before { content: "[X] "; }
+
+input[type=3D"checkbox"]:disabled ~ span { opacity: 0.3; cursor: default; }
+
+input[type=3D"checkbox"]:disabled ~ span::before { content: "[-] "; }
+
+input[type=3D"checkbox"]:disabled ~ span:hover { background-color: transpar=
+ent; }
+
+input[type=3D"submit"] { background: transparent; border: 0px; font-family:=
+ inherit; font-size: inherit; margin: 0px; padding: 0px; color: rgb(0, 153,=
+ 0); cursor: pointer; }
+
+input[type=3D"submit"]:hover, input[type=3D"submit"]:focus { color: rgb(153=
+, 255, 153); }
+
+article { width: 45em; margin-bottom: 2em; margin-top: 2em; }
+
+article:first-child { margin-top: 0px; }
+
+article h2 { color: rgb(255, 255, 255); margin-top: 1em; margin-bottom: 1em=
+; white-space: nowrap; }
+
+article h2 + * { margin-top: 0px; }
+
+article em { color: rgb(255, 255, 255); font-style: normal; text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+article em.star { color: rgb(255, 255, 102); font-style: normal; text-shado=
+w: rgb(255, 255, 102) 0px 0px 5px; }
+
+article a { white-space: nowrap; }
+
+article .aside { opacity: 0.6; }
+
+article ul { list-style-type: none; padding: 0px; }
+
+article li { padding-left: 2.5em; position: relative; }
+
+article li::before { content: "=C2=A0=C2=A0-=C2=A0"; position: absolute; le=
+ft: 0px; top: 0px; }
+
+.day-success { color: rgb(255, 255, 102); text-shadow: rgb(255, 255, 102) 0=
+px 0px 5px; }
+
+form#settings input[type=3D"radio"] ~ span { min-width: 30em; }
+
+form#settings input[type=3D"checkbox"] ~ span { min-width: 30em; }
+
+.share { color: rgb(0, 153, 0); cursor: default; transition: color 0.2s eas=
+e 1s; }
+
+.share:hover, .share:focus-within { color: rgb(170, 255, 170); transition: =
+color 0.2s ease 0s; }
+
+.share .share-content { display: inline-block; vertical-align: text-bottom;=
+ white-space: nowrap; overflow: hidden; max-width: 0px; transition: max-wid=
+th 0.2s ease 1s; }
+
+.share .share-content::before { content: "=C2=A0"; }
+
+.share .share-content::after { }
+
+.share:hover .share-content, .share:focus-within .share-content { max-width=
+: 45em; transition: max-width 0.2s ease 0s; }
+
+.puzzle-input { border: 1px solid rgb(153, 153, 153); background: rgb(51, 5=
+1, 51); color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+
+.calendar { cursor: default; user-select: none; }
+
+.calendar > span { color: rgb(51, 51, 51); }
+
+.calendar > a { text-decoration: none; color: rgb(102, 102, 102); outline: =
+none; cursor: default; }
+
+.calendar a:hover, .calendar a:focus { background-color: rgba(119, 119, 165=
+, 0.2); cursor: pointer; }
+
+#calendar-countdown { padding-left: 0.5em; color: rgb(204, 204, 204); }
+
+.calendar .calendar-day { color: rgb(102, 102, 102); }
+
+.calendar a .calendar-day { color: rgb(204, 204, 204); }
+
+.calendar a .calendar-mark-complete, .calendar a .calendar-mark-verycomplet=
+e { visibility: hidden; }
+
+.calendar a.calendar-complete .calendar-mark-complete, .calendar a.calendar=
+-verycomplete .calendar-mark-complete { visibility: visible; color: rgb(255=
+, 255, 102); }
+
+.calendar a.calendar-verycomplete .calendar-mark-verycomplete { visibility:=
+ visible; color: rgb(255, 255, 102); }
+
+.calendar .calendar-day-new { animation: 5s ease 0s 1 normal none running a=
+nim-day-new; }
+
+.calendar .calendar-day-new .calendar-day { animation: 5s ease 0s 1 normal =
+none running anim-day-new-day; }
+
+@keyframes anim-day-new {=20
+  0% { color: rgb(51, 51, 51); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+}
+
+@keyframes anim-day-new-day {=20
+  0% { color: rgb(102, 102, 102); text-shadow: transparent 0px 0px 5px; }
+  25% { color: rgb(255, 255, 255); text-shadow: rgb(255, 255, 255) 0px 0px =
+5px; }
+  100% { color: rgb(204, 204, 204); text-shadow: transparent 0px 0px 5px; }
+}
+
+.eventlist-event { white-space: pre; }
+
+.stats > span, .stats > span .stats-firstonly, .stats > span .stats-both { =
+color: rgb(102, 102, 102); }
+
+.stats > a { color: rgb(204, 204, 204); min-width: 35em; display: inline-bl=
+ock; }
+
+.stats > a:hover, .stats > a:focus { background-color: rgb(30, 30, 70); }
+
+.stats-firstonly { color: rgb(153, 153, 204); }
+
+.stats-both { color: rgb(255, 255, 102); }
+
+.leaderboard-daylinks { cursor: default; }
+
+.leaderboard-daylinks-selected { color: rgb(255, 255, 255); text-shadow: rg=
+b(255, 255, 255) 0px 0px 5px; }
+
+.leaderboard-daydesc-first { color: rgb(153, 153, 204); }
+
+.leaderboard-daydesc-both { color: rgb(255, 255, 102); }
+
+.leaderboard-entry { white-space: pre; }
+
+.leaderboard-entry .leaderboard-totalscore { color: rgb(255, 255, 255); }
+
+.leaderboard-anon { opacity: 0.6; }
+
+.leaderboard-userphoto { display: inline-block; height: 20px; width: 20px; =
+margin: 0px 0.5em; text-align: center; }
+
+.leaderboard-userphoto img { height: 20px; max-width: 20px; vertical-align:=
+ middle; position: relative; top: -2px; }
+
+.leaderboard-time { opacity: 0.5; }
+
+.privboard-row { white-space: pre; }
+
+.privboard-name { vertical-align: text-bottom; }
+
+.privboard-days > span { display: inline-block; color: rgb(51, 51, 51); }
+
+.privboard-days > a { display: inline-block; }
+
+.privboard-star-locked { visibility: hidden; }
+
+.privboard-star-unlocked { color: rgb(51, 51, 51); }
+
+.privboard-star-firstonly { color: rgb(153, 153, 204); }
+
+.privboard-star-both { color: rgb(255, 255, 102); }
+
+.privboard-delbtn { opacity: 0.33; }
+
+.privboard-row:hover .privboard-delbtn { opacity: 1; }
+
+.sponsors { width: 46em; }
+
+.sponsor { margin: 1em 0px; }
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://adventofcode.com/static/highcontrast.css?0
+
+@charset "utf-8";
+
+* { background: white !important; color: black !important; text-shadow: non=
+e !important; }
+
+a { color: rgb(0, 0, 255) !important; text-decoration: underline !important=
+; }
+
+em { font-weight: 900 !important; }
+------MultipartBoundary--L6j1i347HAeXDusFrLGorNQoZXvwqb7mo9ElpFffXN------

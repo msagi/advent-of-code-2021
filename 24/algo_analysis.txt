@@ -1,0 +1,61 @@
+def alu_monad0(w, x, y, z):
+	x = x * 0  # <- x is reset -> no need to track x in between w digits
+	x = x + z
+	x = x % 26
+	z = z // 1  # <- this line is changing: 'z = z // z_param' -> extract parameter to Z[i]
+	x = x + 14  # <- this line is changing: 'x = x + x_param' -> extract parameter to X[i]
+	x = 1 if x == w else 0
+	x = 1 if x == 0 else 0
+	y = y * 0  # <- y is reset -> no need to track y in between w digits
+	y = y + 25
+	y = y * x
+	y = y + 1
+	z = z * y
+	y = y * 0
+	y = y + w
+	y = y + 7  # <- this line is changing: 'y = y + y_param' -> extract parameter to Y[i]
+	y = y * x
+	z = z + y  # <- need to track only z in between w digits
+	return x, y, z
+
+# ----------------------
+
+# CASE 1)
+
+def alu_monadN(w, x, y, z):
+	z = z // z_param('1|26')
+	x = (z % 26) + x_param
+	x = 1 if x == w else 0
+	x = 1 if x == 0 else 0  # SET ((z % 26) + x_param) == w --> x = 0 (fix x = 0 for this case)
+	y = 25
+	y = y * x  # x = 0, y = 0
+	y = y + 1  # x = 0, y = 1
+	z = z * y  # x = 0, y = 1, z does not change
+	y = w + y_param
+	y = y * x  # x = 0, y = 0
+	z = z + y  # z = z does not change
+	return x, y, z
+
+# -> if ((z % 26) + x_param) == w then there are 2 cases:
+# --> z1 = z  # z does not change
+# --> z1 = z // 26  # z is divided by 26 -> !!! this is the only way z DECREASES !!!
+
+# CASE 2)
+
+def alu_monadN(w, x, y, z):
+	z = z // z_param('1|26')
+	x = (z % 26) + x_param
+	x = 1 if x == w else 0
+	x = 1 if x == 0 else 0  # SET ((z % 26) + x_param) != w --> x = 1 (fix x = 1 for this case)
+	y = 25
+	y = y * x  # x = 1, y = 25
+	y = y + 1  # x = 1, y = 26
+	z = z * y  # x = 1, y = 26, z = z * 26 (change)
+	y = w + y_param
+	y = y * x  # x = 1, y no change
+	z = z + y  # z = (z * 26) + w + y_param
+	return x, y, z
+
+# -> if ((z % 26) + x_param) != w then there are 2 cases:
+# --> z1 = z // 1 * 26  + w + y_param
+# --> z2 = z // 26 * 26  + w + y_param

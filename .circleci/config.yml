@@ -10,7 +10,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run:
-          command: "echo Hello "
+          command: "echo Hello ${ENV_VAR_NAME} "
   print-world:
     docker:
       - image: circleci/node:13.8.0

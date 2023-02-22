@@ -24,7 +24,8 @@ jobs:
       - persist_to_workspace:
           root: /tmp
           paths:
-            - *
+            - pipeline_id.txt
+            - output.txt
   print_output_file:
     docker:
       - image: cimg/base:2023.02

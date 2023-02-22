@@ -34,7 +34,9 @@ jobs:
       - attach_workspace:
           at: /tmp
       - run:
-          command: "cat output.txt"
+          command: |
+          ls -la
+          cat ./output.txt
     
 workflows:
   say-hello-workflow:

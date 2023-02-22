@@ -8,8 +8,8 @@ commands:
         default: "/tmp/output.txt"  
     steps:
       - run:
-        command: |
-          echo $CIRCLE_WORKFLOW_ID > << parameters.to >>
+          command: |
+            echo $CIRCLE_WORKFLOW_ID > << parameters.to >>
 
 jobs:
   save_hello_world_output:

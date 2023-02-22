@@ -1,22 +1,17 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
-# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+commands:
+  print_pipeline_id:
+    parameters:
+      to:
+        type: string
+        default: "/tmp/output.txt"  
+    steps:
+      - run:
+        command: |
+          echo $CIRCLE_WORKFLOW_ID > << parameters.to >>
+
 jobs:
-  print-hello:
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - run:
-          command: "echo Hello ${ENV_VAR_NAME} "
-  print-world:
-    docker:
-      - image: circleci/node:13.8.0
-    steps:
-      - run:
-          command: "echo World! ${MY_VAR}"
   save_hello_world_output:
     docker:
       - image: cimg/base:2023.02
@@ -24,12 +19,12 @@ jobs:
       - run:
           command: |
             echo Hello World > /tmp/output.txt
-            ls -la /tmp
-            ls -la .
+      - print_pipeline_id:
+          to: "/tmp/pipeline_id.txt"
       - persist_to_workspace:
           root: /tmp
           paths:
-            - output.txt
+            - *.txt
   print_output_file:
     docker:
       - image: cimg/base:2023.02
@@ -41,14 +36,11 @@ jobs:
             ls -la /tmp
             ls -la .
             cat /tmp/output.txt
+            cat /tmp/pipeline_id.txt
     
 workflows:
   say-hello-workflow:
     jobs:
-      - print-hello
-      - print-world:
-          requires:
-            - print-hello
       - save_hello_world_output
       - print_output_file:
           requires:

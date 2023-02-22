@@ -35,8 +35,8 @@ jobs:
           at: /tmp
       - run:
           command: |
-          ls -la
-          cat ./output.txt
+            ls -la
+            cat ./output.txt
     
 workflows:
   say-hello-workflow:

@@ -39,10 +39,6 @@ jobs:
             cat /tmp/output.txt
             cat /tmp/pipeline_id.txt
             return 1
-  print_error_message:
-    docker:
-      - image: cimg/base:2023.02
-    steps:
       - run:
           name: Upload Failed Tests
           command: |
@@ -56,4 +52,3 @@ workflows:
       - print_output_file:
           requires:
             - save_hello_world_output
-      - print_error_message

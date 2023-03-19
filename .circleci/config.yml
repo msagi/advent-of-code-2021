@@ -38,7 +38,7 @@ jobs:
             ls -la .
             cat /tmp/output.txt
             cat /tmp/pipeline_id.txt
-            return 1
+            exit 1
       - run:
           name: Upload Failed Tests
           command: |
